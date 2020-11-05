@@ -1,0 +1,20 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Creates a multi-day bar chart to compare the volume distribution around open and close auctions.
+//
+// @example Create and render a bar chart specification using data from a single day:
+// .qp.go[600;400;] .ex001.ff
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{
+  t:select from .ex001.data where 2020=`year$date;
+  t:update .qdate.print["%b %d";] each date from t;
+  .qp.stack(
+    .qp.bar[t;`time;`volpct;]
+        .qp.s.geom[``position!(::;`position)]
+      , .qp.s.aes[`group`fill;`date`date]
+    )
+  }
