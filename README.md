@@ -1,2 +1,3 @@
 # qplot
-Plotting in kdb+/q
+
+A step-by-step tutorial on creating plots in q
