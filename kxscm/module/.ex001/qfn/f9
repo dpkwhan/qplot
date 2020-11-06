@@ -13,7 +13,7 @@
 
 {[yyyy]
   t:select from .ex001.data where yyyy=`year$date;
-  t:update .qdate.print["%b %d";] each date,`$string time from t;
+  t:update .qdate.print["%b %e";] each date,`$string time from t;
   xfmt:{$[-17h=type x;`;x=`$"09:29";`Open;x=`$"16:00";`Close;x]};
   yfmt:{`$string[floor 0.5+100*x],"%"};
   
