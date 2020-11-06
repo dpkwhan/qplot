@@ -4,26 +4,24 @@
 //
 // @fileOverview Creates a basic bar chart using data from a single day.
 //
-// @param yyyy {long} A year
+// @param dt {date} A date
 //
 // @example Create and render a bar chart specification using data from a single day:
-// .qp.go[600;400;] .ex001.f9 2020
+// .qp.go[600;400;] .ex001.f07 2020.11.03
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
-{[yyyy]
-  t:select from .ex001.data where yyyy=`year$date;
-  t:update .qdate.print["%b %e";] each date,`$string time from t;
+{[dt]
+  t:select from .ex001.data where date=dt;
+  t:update `$string time from t;
   xfmt:{$[-17h=type x;`;x=`$"09:29";`Open;x=`$"16:00";`Close;x]};
   yfmt:{`$string[floor 0.5+100*x],"%"};
   
   .qp.stack (
     .qp.bar[t;`time;`volpct;]
-       .qp.s.geom[``position!(::;`dodge)]
-      ,.qp.s.aes[`fill`group;`date`date]
-      ,.qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
-      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
-      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+       .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.categorical[]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
     .qp.vline[12:00;]
        .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
     )

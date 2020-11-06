@@ -7,13 +7,13 @@
 // @param yyyy {long} A year
 //
 // @example Create and render a bar chart specification using data from a single day:
-// .qp.go[600;400;] .ex001.f8 2020
+// .qp.go[600;400;] .ex001.f09 2020
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
 {[yyyy]
   t:select from .ex001.data where yyyy=`year$date;
-  t:update `$string time from t;
+  t:update .qdate.print["%b %e";] each date,`$string time from t;
   xfmt:{$[-17h=type x;`;x=`$"09:29";`Open;x=`$"16:00";`Close;x]};
   yfmt:{`$string[floor 0.5+100*x],"%"};
   

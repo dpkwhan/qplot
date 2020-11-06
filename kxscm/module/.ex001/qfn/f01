@@ -7,13 +7,12 @@
 // @param dt {date} A date
 //
 // @example Create and render a bar chart specification using data from a single day:
-// .qp.go[600;400;] .ex001.f2 2020.11.03
+// .qp.go[600;400;] .ex001.f01 2020.11.03
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
 {[dt]
   t:select from .ex001.data where date=dt;
-  t:update `$string time from t;
   
   .qp.bar[t;`time;`volpct;::]
   }
