@@ -9,3 +9,4 @@
 .qp.png[`:./qplot/docs/assets/img/ex001.f09.png;600;400;] .ex001.f09 2020;
 .qp.png[`:./qplot/docs/assets/img/ex001.f10.png;600;400;] .ex001.f10 2020;
 .qp.png[`:./qplot/docs/assets/img/ex001.f11.png;600;600;] .ex001.f11[];
+.qp.png[`:./qplot/docs/assets/img/ex001.f11.png;600;600;] .qp.vertical(.ex001.f12 2016;.ex001.f12 2020);
