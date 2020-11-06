@@ -1,0 +1,17 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Creates a basic bar chart using data from a single day.
+//
+// @example Create and render a bar chart specification using data from a single day:
+// .qp.go[600;400;] .ex001.f11
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{
+  .qp.vertical(
+    .ex001.f10 2016;
+    .ex001.f10 2020
+    )
+  }

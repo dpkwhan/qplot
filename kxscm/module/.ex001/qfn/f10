@@ -18,6 +18,7 @@
   yfmt:{`$string[floor 0.5+100*x],"%"};
   ll:reverse exec distinct date from t; / legend label
   
+  .qp.title["Market Volume Distribution around Auctions: ",string yyyy]
   .qp.theme[`legend_header_background_fill`legend_padding_top!(`white;-20)]
   .qp.stack (
     .qp.bar[t;`time;`volpct;]
