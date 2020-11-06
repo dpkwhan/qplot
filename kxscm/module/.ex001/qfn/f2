@@ -14,5 +14,6 @@
 {[dt]
   t:select from .ex001.data where date=dt;
   t:update `$string time from t;
-  :.qp.bar[t;`time;`volpct;::];
+  
+  .qp.bar[t;`time;`volpct;::]
   }

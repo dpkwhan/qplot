@@ -13,5 +13,6 @@
 
 {[dt]
   t:select from .ex001.data where date=dt;
-  :.qp.bar[t;`time;`volpct;::];
+  
+  .qp.bar[t;`time;`volpct;::]
   }

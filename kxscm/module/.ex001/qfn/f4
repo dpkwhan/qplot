@@ -7,7 +7,7 @@
 // @param dt {date} A date
 //
 // @example Create and render a bar chart specification using data from a single day:
-// .qp.go[600;400;] .ex001.f3 2020.11.03
+// .qp.go[600;400;] .ex001.f4 2020.11.03
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
@@ -15,5 +15,7 @@
   t:select from .ex001.data where date=dt;
   t:update `$string time from t;
   
-  .qp.bar[t;`time;`volpct;] .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
+  .qp.bar[t;`time;`volpct;]
+     .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
+    ,.qp.s.scale[`y;.gg.scale.format[{`$string[floor 0.5+100*x],"%"};] .gg.scale.linear]
   }
