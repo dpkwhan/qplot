@@ -5,3 +5,4 @@
 .qp.png[`:./qplot/docs/assets/img/ex001.f5.png;600;400;] .ex001.f5 2020.11.03;
 .qp.png[`:./qplot/docs/assets/img/ex001.f6.png;600;400;] .ex001.f6 2020.11.03;
 .qp.png[`:./qplot/docs/assets/img/ex001.f7.png;600;400;] .ex001.f7 2020.11.03;
+.qp.png[`:./qplot/docs/assets/img/ex001.f8.png;600;400;] .ex001.f8 2020;
