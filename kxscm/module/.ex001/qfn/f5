@@ -14,12 +14,12 @@
 {[dt]
   t:select from .ex001.data where date=dt;
   t:update `$string time from t;
-  fmt:{`$string[floor 0.5+100*x],"%"};
+  yfmt:{`$string[floor 0.5+100*x],"%"};
   
   .qp.stack (
     .qp.bar[t;`time;`volpct;]
        .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
-      ,.qp.s.scale[`y;.gg.scale.format[fmt;] .gg.scale.linear];
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
     .qp.vline[12:00;::]
     )
   }
