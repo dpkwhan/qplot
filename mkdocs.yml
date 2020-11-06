@@ -38,6 +38,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.highlight:
+      linenums: true
   - toc:
       permalink: true
   - markdown_include.include:
