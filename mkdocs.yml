@@ -66,4 +66,10 @@ theme:
 nav:
   - Home: index.md
   - qPlot:
+      - Line:
+        - Basic Line: examples/line/basic_line.md
+        - Smoothed Line: examples/line/smoothed_line.md
+      - Bar:
+        - Simple Bar: examples/bar/basic_bar.md
       - Example 1: examples/ex001.md
+      - Example 2: examples/ex002.md
