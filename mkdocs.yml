@@ -39,7 +39,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.highlight:
-      linenums: true
+      linenums: false
   - toc:
       permalink: true
   - markdown_include.include:
@@ -67,8 +67,8 @@ nav:
   - Home: index.md
   - qPlot:
       - Line:
-        - Basic Line: examples/line/basic_line.md
-        - Smoothed Line: examples/line/smoothed_line.md
+        - Basic: examples/line/basic.md
+        - Smoothed: examples/line/smoothed.md
       - Bar:
         - Simple Bar: examples/bar/basic_bar.md
       - Example 1: examples/ex001.md
