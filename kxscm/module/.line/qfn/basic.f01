@@ -1,0 +1,14 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a basic line chart.
+//
+// @example Create and render a line chart specification:
+// .qp.go[600;400;] .line.basic.f01[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{[]
+  .qp.line[.line.iexMktShare;`quarter;`mktshr;::]
+  }

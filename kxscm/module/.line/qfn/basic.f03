@@ -1,0 +1,20 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a basic line chart.
+//
+// @example Create and render a line chart specification:
+// .qp.go[600;400;] .line.basic.f03[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{[]
+  xfmt:{n:`long$last string x;$[0=n mod 2;x;`]};
+  yfmt:{`$string[0.1*floor 0.5+1000*x],"%"};
+  
+  .qp.line[.line.iexMktShare;`quarter;`mktshr;]
+     .qp.s.labels[`x`y!(`Quarter;`$"Market Share (%)")]
+    ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+    ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+  }

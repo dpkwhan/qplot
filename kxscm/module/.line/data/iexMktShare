@@ -1,21 +1,25 @@
 // @kind data
-// @fileoverview This data table contains the volume distribution around auctions on the 
-//  days before and after the U.S. presidential election in 2016 and 2020. It has the 
-//  following table schema:
+// @fileoverview This table contains the overall market share of Investors Exchange (IEX) in 
+//  the U.S. equities market since its inception in 2016. It has the following table schema:
 //
 //     c      | t f a
 //     -------| -----
 //     quarter| s    
 //     mktshr | f   
 //
+// A snippet of the data looks like:
+//
+//     quarter mktshr    
+//     ------------------
+//     2020Q1  0.02633979
+//     2020Q2  0.01974908
+//     2020Q3  0.01760649
+//     2020Q4  0.02774388
+//
 // A few notes about this data:
 //
-// - The value corresponding to ``09:29`` is for open auction and the value for ``16:00`` 
-//   is for close auction.
-// - The ``time`` column indicates the start time of minute bars.
-// - There are 12 data points for each day: one for open auction, one for close auction, 
-//   5 data points for the first 5 minutes right after market open and another 5 data 
-//   points for the last 5 minutes before market close.
+// - Column quarter is a symbol type and ``2020Q4`` means the fourth quarter of 2020.
+// - A value of ``0.0277`` in column ``mkshr`` means 2.77%.
 //
 // @example Retrieve quarterly market share in 2020
 // select from .line.iexMktShare where quarter like "*2020*"

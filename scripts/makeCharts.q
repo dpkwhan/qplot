@@ -9,4 +9,10 @@
 .qp.png[`:./qplot/docs/assets/img/ex001.f09.png;600;400;] .ex001.f09 2020;
 .qp.png[`:./qplot/docs/assets/img/ex001.f10.png;600;400;] .ex001.f10 2020;
 .qp.png[`:./qplot/docs/assets/img/ex001.f11.png;600;600;] .ex001.f11[];
-.qp.png[`:./qplot/docs/assets/img/ex001.f11.png;600;600;] .qp.vertical(.ex001.f12 2016;.ex001.f12 2020);
+.qp.png[`:./qplot/docs/assets/img/ex001.f12.png;600;600;] .qp.vertical(.ex001.f12 2016;.ex001.f12 2020);
+
+.qp.png[`:./qplot/docs/assets/img/line.basic.step.01.png;600;400;] .line.basic.f01[];
+.qp.png[`:./qplot/docs/assets/img/line.basic.step.02.png;600;400;] .line.basic.f02[];
+.qp.png[`:./qplot/docs/assets/img/line.basic.step.03.png;600;400;] .line.basic.f03[];
+.qp.png[`:./qplot/docs/assets/img/line.basic.step.04.png;600;400;] .line.basic.f04[];
+.qp.png[`:./qplot/docs/assets/img/line.basic.step.final.png;600;400;] .line.basic.ff[];
