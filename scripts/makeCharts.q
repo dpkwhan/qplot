@@ -16,3 +16,5 @@
 .qp.png[`:./qplot/docs/assets/img/line.basic.step.03.png;600;400;] .line.basic.f03[];
 .qp.png[`:./qplot/docs/assets/img/line.basic.step.04.png;600;400;] .line.basic.f04[];
 .qp.png[`:./qplot/docs/assets/img/line.basic.step.final.png;600;400;] .line.basic.ff[];
+
+.qp.png[`:./qplot/docs/assets/img/line.smoothed.step.final.png;600;400;] .line.smoothed.ff[];

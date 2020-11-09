@@ -1,0 +1,34 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a smoothed line chart.
+//
+// @example Create and render a smoothed line chart specification:
+// .qp.go[600;400;] .line.smoothed.ff[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{
+  t1:select quarter,mktshr,x:i,y:mktshr from .line.iexMktShare;
+  t2:.qlib.math.spline[t1;`quarter;`mktshr];
+  
+  xfmt:{
+    i:floor x;
+    m:exec quarter from .line.iexMktShare;
+    $[0=i mod 2;m i;`]
+    };
+  yfmt:{`$.qlib.utils.toFixed[1;100*x],"%"};
+  
+  .qp.title["Smoothed Line Chart"]
+  .qp.stack (
+    .qp.point[t1;`x;`y;] 
+       .qp.s.geom[`size`colour`fill`strokewidth!(2;`red;`white;1)]
+      ,.qp.s.labels[`x`y!(`Quarter;`$"Market Share (%)")]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.linear]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
+    .qp.line[t2;`x;`y;] 
+       .qp.s.geom[`fill`decorations!(`blue;0b)]
+      ,.qp.s.labels[`x`y!(`Quarter;`$"Market Share (%)")]
+    )
+  }

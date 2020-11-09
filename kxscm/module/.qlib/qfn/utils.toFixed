@@ -1,0 +1,21 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Formats numerical values to a given decimal place.
+//
+// @param x {long} number of decimal points
+// @param y {float|float[]} a single or list of numerical values
+//
+// @returns {string|string[]} A string or list of strings
+// 
+// @example Format a single numerical value to 2 decimal places
+// .qlib.utils.toFixed[2;3.1415926]
+// @example Format a list of numerical values to 2 decimal places
+// .qlib.utils.toFixed[2;] 1.2 123 1.235 -123.5522
+
+{
+  v:$[0>type y;enlist y;y];
+  res:.Q.fmt'[x+1+count each string floor v;x;v];
+  $[1=count res;raze res;res]
+  }

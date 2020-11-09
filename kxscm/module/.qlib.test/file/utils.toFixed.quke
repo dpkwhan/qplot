@@ -1,0 +1,39 @@
+feature utils.toFixed
+
+  before
+    f2::.qlib.utils.toFixed[2;];
+    f4::.qlib.utils.toFixed[4;];
+
+  after
+    delete f2,f4 from `.;
+
+  should format the number to 2 decimal places for a single number
+    expect a string of "3.14"
+      "3.14"~f2 3.1415
+    expect a string of "3.10"
+      "3.10"~f2 3.1
+    expect a string of "-3.14"
+      "-3.14"~f2 -3.1415
+    expect a string of "0.14"
+      "0.14"~f2 0.13678
+
+  should format the number to 4 decimal places for a single number
+    expect a string of "3.1416"
+      "3.1416"~f4 3.14159
+    expect a string of "3.10"
+      "3.1000"~f4 3.1
+    expect a string of "-3.1415"
+      "-3.1415"~f4 -3.14152
+    expect a string of "0.1368"
+      "0.1368"~f4 0.13678
+      
+  should format the number to 2 decimal places for two numbers
+    expect a list of two strings: ("3.14";"2.10")
+      ("3.14";"2.10")~f2 3.1415 2.1
+    expect a list of two strings: ("3.14";"-2.10")
+      ("3.14";"-2.00")~f2 3.1415 -1.996
+    expect a list of two strings: ("3.14";"-2.10")
+      ("-3.14";"-2.00")~f2 -3.1415 -1.996
+    expect a list of three strings: ("0.142";"-2.10";"-0.0235")
+      ("0.1420";"-2.0000";"-0.0235")~f4 0.142 -1.99997 -0.02345
+   
