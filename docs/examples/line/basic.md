@@ -1,9 +1,9 @@
-# Basic Line
+# Basic Line Chart
 
 In this example, we are going to create a basic line chart to show the quarterly market share of Investors Exchange in U.S. equities market since it was launched in 2016. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/line.basic.final.png)
+![Final Chart](../../assets/img/line.basic.step.final.png)
 </span>
 
 ## Overview of Data
@@ -136,5 +136,5 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],"%"};
 Here is the final line chart with data points. A title is also added into the chart.
 
 <span style="display:block;text-align:center">
-![Final Step](../../assets/img/line.basic.final.png)
+![Final Step](../../assets/img/line.basic.step.final.png)
 </span>
