@@ -1,0 +1,22 @@
+// @kind data
+// @fileoverview This table contains the total market volume in shares in the 10 years between 2010 
+//  and 2019 in the U.S. equities market. It has the following table schema:
+//
+//     c       | t f a
+//     --------| -----
+//     year    | j    
+//     exchange| s    
+//     shares  | f 
+//
+// A snippet of the data looks like:
+//
+//     year exchange      shares       
+//     --------------------------------
+//     2019 NYSE Chicago  7.923022e+009
+//     2019 NYSE National 2.48449e+010 
+//     2019 TRF           6.601719e+011
+//
+// @example Retrieve market volume in 2019
+// select from .line.mktVolume where year=2019
+
+("JSF";enlist csv) 0:read0 `:.line/mktVolume.csv

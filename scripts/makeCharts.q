@@ -18,3 +18,4 @@
 .qp.png[`:./qplot/docs/assets/img/line.basic.step.final.png;600;400;] .line.basic.ff[];
 
 .qp.png[`:./qplot/docs/assets/img/line.smoothed.step.final.png;600;400;] .line.smoothed.ff[];
+.qp.png[`:./qplot/docs/assets/img/line.stacked.step.final.png;600;400;] .line.stacked.ff[];
