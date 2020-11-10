@@ -69,6 +69,7 @@ nav:
       - Line:
         - Basic: examples/line/basic.md
         - Smoothed: examples/line/smoothed.md
+        - Stacked: examples/line/stacked.md
       - Area:
         - Basic: examples/area/basic.md
       - Bar:
