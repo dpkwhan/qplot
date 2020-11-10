@@ -46,7 +46,7 @@ There are a few places we can do better to improve this basic line chart:
 
 Let's see how we can achieve the above improvements.
 
-## Step 2: Customize Axis Labels
+## Step 2: Axis Labels
 By default, the column names are used as the axis labels. In this step, I will show how to customize the axis labels. We use ``.qp.s.labels`` to customize the appreance of labels.
 
 ```q
@@ -62,7 +62,7 @@ By adding the last line in the above code snippet, the labels on both *x*-axis a
 ![Step 2](../../assets/img/line.basic.step.02.png)
 </span>
 
-## Step 3: Customize the Tick Values
+## Step 3: Tick Values
 In this step, we make two changes:
 
 - The tick values on the *y*-axis are rendered as percentage by adding a percent sign in string format
@@ -86,7 +86,7 @@ The last two lines with ``.qp.s.scale`` customize the look of tick values on bot
 ![Step 3](../../assets/img/line.basic.step.03.png)
 </span>
 
-## Step 4: Adding Data Points
+## Step 4: Data Points
 The geometry settings allow us to show the data points and customize the color of the line and points.
 
 ```q

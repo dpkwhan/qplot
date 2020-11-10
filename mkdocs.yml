@@ -65,7 +65,7 @@ theme:
 
 nav:
   - Home: index.md
-  - qPlot:
+  - Examples:
       - Line:
         - Basic: examples/line/basic.md
         - Smoothed: examples/line/smoothed.md
