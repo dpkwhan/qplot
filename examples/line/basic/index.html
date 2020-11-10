@@ -287,22 +287,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-customize-axis-labels" class="md-nav__link">
-    Step 2: Customize Axis Labels
+  <a href="#step-2-axis-labels" class="md-nav__link">
+    Step 2: Axis Labels
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-customize-the-tick-values" class="md-nav__link">
-    Step 3: Customize the Tick Values
+  <a href="#step-3-tick-values" class="md-nav__link">
+    Step 3: Tick Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-adding-data-points" class="md-nav__link">
-    Step 4: Adding Data Points
+  <a href="#step-4-data-points" class="md-nav__link">
+    Step 4: Data Points
   </a>
   
 </li>
@@ -503,22 +503,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-customize-axis-labels" class="md-nav__link">
-    Step 2: Customize Axis Labels
+  <a href="#step-2-axis-labels" class="md-nav__link">
+    Step 2: Axis Labels
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-customize-the-tick-values" class="md-nav__link">
-    Step 3: Customize the Tick Values
+  <a href="#step-3-tick-values" class="md-nav__link">
+    Step 3: Tick Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-adding-data-points" class="md-nav__link">
-    Step 4: Adding Data Points
+  <a href="#step-4-data-points" class="md-nav__link">
+    Step 4: Data Points
   </a>
   
 </li>
@@ -586,7 +586,7 @@ mktshr | f
 <li>Show the data points as a small empty circle</li>
 </ul>
 <p>Let's see how we can achieve the above improvements.</p>
-<h2 id="step-2-customize-axis-labels">Step 2: Customize Axis Labels<a class="headerlink" href="#step-2-customize-axis-labels" title="Permanent link">&para;</a></h2>
+<h2 id="step-2-axis-labels">Step 2: Axis Labels<a class="headerlink" href="#step-2-axis-labels" title="Permanent link">&para;</a></h2>
 <p>By default, the column names are used as the axis labels. In this step, I will show how to customize the axis labels. We use <code>.qp.s.labels</code> to customize the appreance of labels.</p>
 <pre><code class="q">// .line.basic.f02
 .qp.go[600;400;]
@@ -598,7 +598,7 @@ mktshr | f
 <p><span style="display:block;text-align:center">
 <img alt="Step 2" src="../../../assets/img/line.basic.step.02.png" />
 </span></p>
-<h2 id="step-3-customize-the-tick-values">Step 3: Customize the Tick Values<a class="headerlink" href="#step-3-customize-the-tick-values" title="Permanent link">&para;</a></h2>
+<h2 id="step-3-tick-values">Step 3: Tick Values<a class="headerlink" href="#step-3-tick-values" title="Permanent link">&para;</a></h2>
 <p>In this step, we make two changes:</p>
 <ul>
 <li>The tick values on the <em>y</em>-axis are rendered as percentage by adding a percent sign in string format</li>
@@ -619,7 +619,7 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
 <p><span style="display:block;text-align:center">
 <img alt="Step 3" src="../../../assets/img/line.basic.step.03.png" />
 </span></p>
-<h2 id="step-4-adding-data-points">Step 4: Adding Data Points<a class="headerlink" href="#step-4-adding-data-points" title="Permanent link">&para;</a></h2>
+<h2 id="step-4-data-points">Step 4: Data Points<a class="headerlink" href="#step-4-data-points" title="Permanent link">&para;</a></h2>
 <p>The geometry settings allow us to show the data points and customize the color of the line and points.</p>
 <pre><code class="q">xfmt:{n:`long$last string x;$[0=n mod 2;x;`]};
 yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
