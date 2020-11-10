@@ -1,0 +1,1146 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="qPlot">
+      
+      
+        <link rel="canonical" href="https://dpkwhan.github.io/qplot/examples/ex001/">
+      
+      
+        <meta name="author" content="David Han">
+      
+      <link rel="shortcut icon" href="../../assets/img/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+    
+    
+      
+        <title>Example 1 - qPlot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5d00201e.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.816e8abc.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-solarizedlight.min.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-140259656-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#volume-distribution-around-auctions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://dpkwhan.github.io/qplot/" title="qPlot" class="md-header-nav__button md-logo" aria-label="qPlot">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            qPlot
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Example 1
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://dpkwhan.github.io/qplot/" title="qPlot" class="md-nav__button md-logo" aria-label="qPlot">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    qPlot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      qPlot
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="qPlot" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        qPlot
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Line
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Line" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Line
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../line/basic/" title="Basic" class="md-nav__link">
+      Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../line/smoothed/" title="Smoothed" class="md-nav__link">
+      Smoothed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../line/stacked/" title="Stacked" class="md-nav__link">
+      Stacked
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Area
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Area" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Area
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../area/basic/" title="Basic" class="md-nav__link">
+      Basic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Bar
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Bar" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Bar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bar/simple/" title="Simple" class="md-nav__link">
+      Simple
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Example 1
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Example 1" class="md-nav__link md-nav__link--active">
+      Example 1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9" class="md-nav__link">
+    Step 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10" class="md-nav__link">
+    Step 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11" class="md-nav__link">
+    Step 11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations" class="md-nav__link">
+    Variations
+  </a>
+  
+    <nav class="md-nav" aria-label="Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legend-title" class="md-nav__link">
+    Legend title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-of-the-divider" class="md-nav__link">
+    Color of the divider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#same-y-axis" class="md-nav__link">
+    Same y-axis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ex002.md" title="Example 2" class="md-nav__link">
+      Example 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9" class="md-nav__link">
+    Step 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10" class="md-nav__link">
+    Step 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11" class="md-nav__link">
+    Step 11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations" class="md-nav__link">
+    Variations
+  </a>
+  
+    <nav class="md-nav" aria-label="Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legend-title" class="md-nav__link">
+    Legend title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-of-the-divider" class="md-nav__link">
+    Color of the divider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#same-y-axis" class="md-nav__link">
+    Same y-axis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="volume-distribution-around-auctions">Volume Distribution Around Auctions<a class="headerlink" href="#volume-distribution-around-auctions" title="Permanent link">&para;</a></h1>
+<p>In this example, we are going to create a bar chart to show and constrast the equities volume distribution around open and close auctions before, on and after the presidential election days in the United States in 2016 and 2020. The final chart looks like below:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Final Chart" src="../../assets/img/ex001.f11.png" />
+</span></p>
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<p>The table <code>.ex001.data</code> has the following schema:</p>
+<pre><code class="q">c     | t f a
+------| -----
+date  | d    
+time  | u    
+volpct| f  
+</code></pre>
+
+<p>The first 3 rows from the table look like this:</p>
+<pre><code class="q">date       time  volpct     
+----------------------------
+2016.11.07 09:29 0.0116136  
+2016.11.07 09:30 0.005534212
+2016.11.07 09:31 0.005412753
+</code></pre>
+
+<h2 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h2>
+<p>Let's create a bar chart. Note that <code>date</code> has a <em>date</em> type and <code>time</code> is of type <em>minute</em> which is continuous type.</p>
+<pre><code class="q">// .ex001.f01
+t:select from .ex001.data where date=2020.11.03;
+.qp.go[600;400;] .qp.bar[t;`time;`volpct;::]
+</code></pre>
+
+<p>The above vanilla code creates a basic bar chart using data from November 3, 2020. The chart is as follows:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 1" src="../../assets/img/ex001.f01.png" />
+</span></p>
+<p>One immediate problem with the chart above is that the bars are clustered at the two sides of the chart because the dataset only contains the data around open auction at 09:30 and close auction at 16:00. This leaves a huge empty space between the two clusters and make the chart really hard to read.</p>
+<h2 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
+<p>// .ex001.f02
+One way to get rid of the empty space is to convert the <code>time</code> column from type <em>minute</em> to a categorical type like <em>string</em> or <em>symbol</em>. Let's modify the code slightly by converting the <code>time</code> into a <em>symbol</em> type:</p>
+<pre><code class="q">t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+.qp.go[600;400;] .qp.bar[t;`time;`volpct;::]
+</code></pre>
+
+<p>With this change in place, the bar chart looks much better.</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 2" src="../../assets/img/ex001.f02.png" />
+</span></p>
+<h2 id="step-3">Step 3<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
+<p>By default, the column names are used as the axis labels. In our example, meaning of the <code>y</code> axis label <code>volpct</code> is not very obvious. In this step, I will show how to customize the axis labels. We use <code>.qp.s.labels</code> to customize the appreance of labels. Note that we use <code>.qp.bar[t;`time;`volpct;]</code> as a function projection.</p>
+<pre><code class="q">// .ex001.f03
+t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+.qp.go[600;400;] 
+  .qp.bar[t;`time;`volpct;]
+    .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+</code></pre>
+
+<p>Now the bar chart looks like this:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 3" src="../../assets/img/ex001.f03.png" />
+</span></p>
+<h2 id="step-4">Step 4<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
+<p>The values on the <code>y</code> axis is actually percentage, <em>i.e.</em> 0.02 means 2%. It looks nicer if the tick values on the <code>y</code> axis are rendered as percentage by adding a percent sign in string format. The function <code>.qp.s.scale</code> will do the trick.</p>
+<pre><code class="q">// .ex001.f04
+t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+.qp.go[600;400;] 
+  .qp.bar[t;`time;`volpct;]
+     .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+    ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+</code></pre>
+
+<p>A function <code>yfmt</code> is defined to format a float number as percentage. </p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 4" src="../../assets/img/ex001.f04.png" />
+</span></p>
+<h2 id="step-5">Step 5<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
+<p>To make the volume bars more distinguishable between volume around open auction and volume around close auction, we can add a veritical divider to clearly separate the two clusters.</p>
+<pre><code class="q">// .ex001.f05
+t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+.qp.go[600;400;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
+    .qp.vline[12:00;::]
+    )
+</code></pre>
+
+<p>We add a vertical line and stack the bar and line on top of each other to produce the chart like below. As you can see that I use <code>12:00</code> as the x-axis value in this example. Actually any value between <code>09:34</code> and <code>15:55</code> surfices. </p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 5" src="../../assets/img/ex001.f05.png" />
+</span></p>
+<h2 id="step-6">Step 6<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
+<p>We have two problems with the tick labels on the x-axis: </p>
+<ul>
+<li>It is quite weird that a tick label is shown for the divider.</li>
+<li>It is much more informative if open auction is labelled as <em>Open</em> and close auction is labelled as <em>Close</em>, instead of <code>09:29</code> and <code>16:00</code>, respectively.</li>
+</ul>
+<p>Let's fix that.</p>
+<pre><code class="q">// .ex001.f06
+t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;::]
+    )
+</code></pre>
+
+<p>After a x-axis tick formatter is added, the bar chart looks much better.</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 6" src="../../assets/img/ex001.f06.png" />
+</span></p>
+<h2 id="step-7">Step 7<a class="headerlink" href="#step-7" title="Permanent link">&para;</a></h2>
+<p>A sharp-eyed reader may notice that there is a trailing comma in y-axis label and the x-axis label changes from "Time" to "Time, x" after the bar and vertical line are stacked on top of each other. This does not look good. Let's see how that can be fixed.</p>
+<pre><code class="q">// .ex001.f07
+t:select from .ex001.data where date=2020.11.03;
+t:update `$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 7" src="../../assets/img/ex001.f07.png" />
+</span></p>
+<h2 id="step-8">Step 8<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
+<p>So far, we have finished a nice-looking bar chart using data from a single day. How about plotting data from multiple days on the same chart? One way it is to dodge the overlapping bars side-to-side. Let's try putting the data for the three days around 2020 presidential election together in one single bar chart.</p>
+<pre><code class="q">// .ex001.f08
+t:select from .ex001.data where 2020=`year$date;
+t:update `$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+    )
+</code></pre>
+
+<p>The chart below has three days of data, but there are a few problems with it:</p>
+<ul>
+<li>The label for the legend is only partially shown</li>
+<li>The color of the legend is a gradient from a color spectrum. It is not easy to distinguish them.</li>
+</ul>
+<p><span style="display:block;text-align:center">
+<img alt="Step 8" src="../../assets/img/ex001.f08.png" />
+</span></p>
+<h2 id="step-9">Step 9<a class="headerlink" href="#step-9" title="Permanent link">&para;</a></h2>
+<p>Let's fix the two issues from the previous step by converting <code>date</code> into a categorical type. Note that <code>.qdate.print</code> is used to format a date. For additional details on the data parsing functions, see <a href="https://code.kx.com/developer/libraries/date-parser/">Date Parsing</a>.</p>
+<pre><code class="q">// .ex001.f09
+t:select from .ex001.data where 2020=`year$date;
+t:update .qdate.print[&quot;%b %e&quot;;] each date,`$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+    )
+</code></pre>
+
+<p>With the changes above, the color looks nicer and the legend label is clear and clean.</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 9" src="../../assets/img/ex001.f09.png" />
+</span></p>
+<h2 id="step-10">Step 10<a class="headerlink" href="#step-10" title="Permanent link">&para;</a></h2>
+<p>In this step, I will make two more updates to the bar chart:</p>
+<ul>
+<li>Remove the <code>date</code> in the legend title</li>
+<li>Add a chart title</li>
+</ul>
+<pre><code class="q">// .ex001.f10
+t:select from .ex001.data where 2020=`year$date;
+t:update .qdate.print[&quot;%b %e&quot;;] each date,`$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+ll:reverse exec distinct date from t; / legend label
+
+.qp.go[600;400;]
+  .qp.title[&quot;Market Volume Distribution around Auctions: 2020&quot;]
+  .qp.theme[`legend_header_background_fill`legend_padding_top!(`white;-20)]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.theme[``legend_use!(::;0b)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.legend[&quot;&quot;;ll!count[ll]#.gg.colour.cat10]
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 10" src="../../assets/img/ex001.f10.png" />
+</span></p>
+<h2 id="step-11">Step 11<a class="headerlink" href="#step-11" title="Permanent link">&para;</a></h2>
+<pre><code class="q">// .ex001.f11
+.qp.go[600;600;]
+  .qp.vertical(
+    .ex001.f10 2016;
+    .ex001.f10 2020
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 11" src="../../assets/img/ex001.f11.png" />
+</span></p>
+<h2 id="variations">Variations<a class="headerlink" href="#variations" title="Permanent link">&para;</a></h2>
+<h3 id="legend-title">Legend title<a class="headerlink" href="#legend-title" title="Permanent link">&para;</a></h3>
+<p>Instead of adding the year to the plot title, we can also use year as the legend title.</p>
+<pre><code class="q">t:select from .ex001.data where 2020=`year$date;
+t:update .qdate.print[&quot;%b %e&quot;;] each date,`$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+ll:reverse exec distinct date from t; / legend label
+
+.qp.go[600;400;]
+  .qp.title[&quot;Market Volume Distribution around Auctions&quot;]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.theme[``legend_use!(::;0b)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.legend[&quot;2020&quot;;ll!count[ll]#.gg.colour.cat10]
+    )
+</code></pre>
+
+<p>And the chart look like this:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 11" src="../../assets/img/ex001.v01.png" />
+</span></p>
+<h3 id="color-of-the-divider">Color of the divider<a class="headerlink" href="#color-of-the-divider" title="Permanent link">&para;</a></h3>
+<p>Instead of using the default grey color for the vertical divider, we can customize the color.</p>
+<pre><code class="q">t:select from .ex001.data where 2020=`year$date;
+t:update .qdate.print[&quot;%b %e&quot;;] each date,`$string time from t;
+xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+ll:reverse exec distinct date from t; / legend label
+
+.qp.go[600;400;]
+  .qp.title[&quot;Market Volume Distribution around Auctions: 2020&quot;]
+  .qp.theme[`legend_header_background_fill`legend_padding_top!(`white;-20)]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.theme[``legend_use!(::;0b)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.geom[``fill!(::;`blue)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.legend[&quot;&quot;;ll!count[ll]#.gg.colour.cat10]
+    )
+</code></pre>
+
+<p>The chart below indicates the color of the divider is changed to be blue.</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 11" src="../../assets/img/ex001.v02.png" />
+</span></p>
+<h3 id="same-y-axis">Same y-axis<a class="headerlink" href="#same-y-axis" title="Permanent link">&para;</a></h3>
+<p>To make it easier to compare the change of volume distribution year over year, the same y-axis should be used. You can use <code>.qs.s.share</code> to force the same axis is used across different charts.</p>
+<pre><code class="q">.ex001.f12:{[yyyy]
+  t:select from .ex001.data where yyyy=`year$date;
+  t:update .qdate.print[&quot;%b %e&quot;;] each date,`$string time from t;
+  xfmt:{$[-17h=type x;`;x=`$&quot;09:29&quot;;`Open;x=`$&quot;16:00&quot;;`Close;x]};
+  yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+  ll:reverse exec distinct date from t; / legend label
+
+  .qp.title[&quot;Market Volume Distribution around Auctions: &quot;,string yyyy]
+  .qp.theme[`legend_header_background_fill`legend_padding_top!(`white;-20)]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.share[`auctionVol;`y]
+      ,.qp.s.theme[``legend_use!(::;0b)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.geom[``fill!(::;`blue)]
+      ,.qp.s.labels[`x`y!(`Time;`$&quot;Share Volume (%)&quot;)]
+      ,.qp.s.legend[&quot;&quot;;ll!count[ll]#.gg.colour.cat10]
+    )
+  };
+
+.qp.go[600;600;]
+  .qp.vertical(
+    .ex001.f12 2016;
+    .ex001.f12 2020
+    )
+</code></pre>
+
+<p>After forcing the same y-axis, the two sub-plots have the same maximum tick label of 6%.</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 11" src="../../assets/img/ex001.v03.png" />
+</span></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../bar/simple/" title="Simple" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Simple
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 David Han. A written permission is required for reproduction.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/dpkwhan/weeklyq" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/zhaohuihan/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.01088dc6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      
+        <script src="https://tracker.mrpfd.com/tracker.js"></script>
+      
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+      
+        <script src="../../assets/js/theme.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+      
+        <script src="../../assets/js/prism.js"></script>
+      
+    
+  </body>
+</html>
