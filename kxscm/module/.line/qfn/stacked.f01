@@ -1,0 +1,17 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a stacked line chart.
+//
+// @example Create and render a stacked line chart specification:
+// .qp.go[600;400;] .line.stacked.f01[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{
+  t:0!update sums shares by year from `year`exchange xasc select from .line.mktVolume;
+  
+  .qp.line[t;`year;`shares;] 
+    .qp.s.aes[`group`fill; `exchange`exchange]
+  }

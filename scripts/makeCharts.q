@@ -18,4 +18,8 @@
 .qp.png[`:./qplot/docs/assets/img/line.basic.step.final.png;600;400;] .line.basic.ff[];
 
 .qp.png[`:./qplot/docs/assets/img/line.smoothed.step.final.png;600;400;] .line.smoothed.ff[];
+
+.qp.png[`:./qplot/docs/assets/img/line.stacked.step.01.png;600;400;] .line.stacked.f01[];
+.qp.png[`:./qplot/docs/assets/img/line.stacked.step.02.png;600;400;] .line.stacked.f02[];
+.qp.png[`:./qplot/docs/assets/img/line.stacked.step.03.png;600;400;] .line.stacked.f03[];
 .qp.png[`:./qplot/docs/assets/img/line.stacked.step.final.png;600;400;] .line.stacked.ff[];

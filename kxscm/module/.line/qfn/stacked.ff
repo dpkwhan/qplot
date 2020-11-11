@@ -9,7 +9,7 @@
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
-{[]
+{
   t:0!update sums shares by year from `year`exchange xasc select from .line.mktVolume;
   t:update string year,shares:shares*1e-9 from t;
   
@@ -17,6 +17,6 @@
   .qp.title["U.S. Equities Market Volume between 2011 and 2019"]
     .qp.line[t;`year;`shares;] 
        .qp.s.aes[`group`fill; `exchange`exchange]
-      ,.qp.s.geom[`size`colour`fill`strokewidth`decorations!(2;`red;`white;1;1b)]
+      ,.qp.s.geom[`size`colour`decorations!(2;`red;1b)]
       ,.qp.s.labels[`x`y!(`Year;`$"Market Volume (billion shares)")]
   }
