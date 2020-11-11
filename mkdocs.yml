@@ -1,6 +1,8 @@
 copyright: "Copyright &copy; 2020 David Han. A written permission is required for reproduction."
 dev_addr: "0.0.0.0:9000"
 docs_dir: "docs"
+extra:
+  version: 1.0
 
 extra_css:
   - assets/css/extra.css
@@ -67,6 +69,7 @@ nav:
   - Home: index.md
   - Examples:
       - Line:
+        - Overview: examples/line/index.md
         - Basic: examples/line/basic.md
         - Smoothed: examples/line/smoothed.md
         - Stacked: examples/line/stacked.md
