@@ -24,7 +24,7 @@ xfmt:{
   m:exec quarter from .line.iexMktShare;
   $[0=i mod 2;m i;`]
   };
-yfmt:{`$.qlib.utils.toFixed[1;100*x],"%"};
+yfmt:{`$utils.toFixed[1;100*x],"%"};
 
 .qp.go[600;400;] 
   .qp.title["Smoothed Line Chart"]
