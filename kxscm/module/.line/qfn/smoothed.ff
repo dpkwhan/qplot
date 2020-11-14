@@ -11,14 +11,14 @@
 
 {
   t1:select quarter,mktshr,x:i,y:mktshr from .line.iexMktShare;
-  t2:.qlib.math.spline[t1;`quarter;`mktshr];
+  t2:.math.spline[t1;`quarter;`mktshr];
   
   xfmt:{
     i:floor x;
     m:exec quarter from .line.iexMktShare;
     $[0=i mod 2;m i;`]
     };
-  yfmt:{`$.qlib.utils.toFixed[1;100*x],"%"};
+  yfmt:{`$.utils.toFixed[1;100*x],"%"};
   
   .qp.title["Smoothed Line Chart"]
   .qp.stack (

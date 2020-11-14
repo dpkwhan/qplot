@@ -10,14 +10,14 @@ In this example, we are going to create a smoothed line chart to show the quarte
 The same dataset is used in this example. For a detailed description of the data, see [Overview of Data](../basic/#overview-of-data) in [Basic Line Chart](../basic/).
 
 ## Cubic Spline
-There is no built-in function to perform cubic spline interpolation in Kx Deverloper libraries. A version is implemented in ``.qlib.math.spline`` according to the wiki page for [Spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation).
+There is no built-in function to perform cubic spline interpolation in Kx Deverloper libraries. A version is implemented in ``.math.spline`` according to the wiki page for [Spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation).
 
 ## Final Chart
 
 ```q
 // .line.smoothed.ff
 t1:select quarter,mktshr,x:i,y:mktshr from .line.iexMktShare;
-t2:.qlib.math.spline[t1;`quarter;`mktshr];
+t2:.math.spline[t1;`quarter;`mktshr];
 
 xfmt:{
   i:floor x;
