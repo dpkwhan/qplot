@@ -238,6 +238,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
@@ -311,15 +323,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    Step 2
+  <a href="#step-2-labels-and-values" class="md-nav__link">
+    Step 2: Labels and Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-final" class="md-nav__link">
-    Step Final
+  <a href="#step-3-add-markers" class="md-nav__link">
+    Step 3: Add Markers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-final-legend" class="md-nav__link">
+    Step Final: Legend
   </a>
   
 </li>
@@ -489,15 +508,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    Step 2
+  <a href="#step-2-labels-and-values" class="md-nav__link">
+    Step 2: Labels and Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-final" class="md-nav__link">
-    Step Final
+  <a href="#step-3-add-markers" class="md-nav__link">
+    Step 3: Add Markers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-final-legend" class="md-nav__link">
+    Step Final: Legend
   </a>
   
 </li>
@@ -541,8 +567,72 @@ shares  | f
 </code></pre></div>
 
 <h2 id="step-1-first-attempt">Step 1: First Attempt<a class="headerlink" href="#step-1-first-attempt" title="Permanent link">&para;</a></h2>
-<h2 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
-<h2 id="step-final">Step Final<a class="headerlink" href="#step-final" title="Permanent link">&para;</a></h2>
+<p>In this step, we simply calculate the cumulative volume traded by each exchange in each year and create a stacked line chart. Notice we sort the data by year and exchange first before the cumulative volume is calculated. A line is plotted for each exchange against year.</p>
+<pre><code class="q">t:0!update sums shares by year from 
+  `year`exchange xasc select from .line.mktVolume;
+
+.qp.go[600;400;]
+  .qp.line[t;`year;`shares;] 
+    .qp.s.aes[`group`fill; `exchange`exchange]
+</code></pre>
+
+<p>Without any customization, the stacked line chart is shown as below:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Step 1" src="../../../assets/img/line.stacked.step.01.png" />
+</span></p>
+<p>There are a couple of aspects we can improve upon this chart:</p>
+<ul>
+<li>Customize the axis labels</li>
+<li>Transform the <em>y</em>-axis values to display them properly</li>
+<li>Adjust the width and height of legend to make it less crowded</li>
+<li>Add markers to the data points</li>
+</ul>
+<h2 id="step-2-labels-and-values">Step 2: Labels and Values<a class="headerlink" href="#step-2-labels-and-values" title="Permanent link">&para;</a></h2>
+<p>First we convert the numerical year into a string to avoid the decimal digits as shown on the <em>x</em>-axis from the previous step. The volume is multiplied by 1e-9 to convert to billion shares. With these two changes, we use <code>.qp.s.labels</code> to customize the labels on both axis.</p>
+<pre><code class="q">t:0!update sums shares by year from 
+  `year`exchange xasc select from .line.mktVolume;
+t:update string year,shares:shares*1e-9 from t;
+
+.qp.go[600;400;] 
+  .qp.line[t;`year;`shares;] 
+    .qp.s.aes[`group`fill; `exchange`exchange]
+   ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 2" src="../../../assets/img/line.stacked.step.02.png" />
+</span></p>
+<h2 id="step-3-add-markers">Step 3: Add Markers<a class="headerlink" href="#step-3-add-markers" title="Permanent link">&para;</a></h2>
+<p>A simple vanilla marker can be added to indicate the actual data points. </p>
+<pre><code class="q">t:0!update sums shares by year from 
+  `year`exchange xasc select from .line.mktVolume;
+t:update string year,shares:shares*1e-9 from t;
+
+.qp.go[600;400;] 
+  .qp.line[t;`year;`shares;] 
+     .qp.s.aes[`group`fill; `exchange`exchange]
+    ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
+    ,.qp.s.geom[`size`colour`decorations!(2;`red;1b)]
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 2" src="../../../assets/img/line.stacked.step.03.png" />
+</span></p>
+<h2 id="step-final-legend">Step Final: Legend<a class="headerlink" href="#step-final-legend" title="Permanent link">&para;</a></h2>
+<p><code>qp.theme</code> is used to customize the legend. Here in this example, we provide a customized width (<code>legend_width</code>) and height (<code>legend_height</code>) to make the legend less crowded and make the full text visible.</p>
+<pre><code class="q">t:0!update sums shares by year from 
+  `year`exchange xasc select from .line.mktVolume;
+t:update string year,shares:shares*1e-9 from t;
+
+.qp.go[600;400;] 
+  .qp.theme[`legend_header_background_fill`legend_padding_top`legend_height`legend_width!(`white;0;300;110)]
+  .qp.title[&quot;U.S. Equities Market Volume between 2011 and 2019&quot;]
+    .qp.line[t;`year;`shares;] 
+       .qp.s.aes[`group`fill; `exchange`exchange]
+      ,.qp.s.geom[`size`colour`decorations!(2;`red;1b)]
+      ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
+</code></pre>
+
 <p><span style="display:block;text-align:center">
 <img alt="Final Step" src="../../../assets/img/line.stacked.step.final.png" />
 </span></p>

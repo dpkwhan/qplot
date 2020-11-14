@@ -238,6 +238,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
@@ -512,18 +524,18 @@
 <h2 id="overview-of-data">Overview of Data<a class="headerlink" href="#overview-of-data" title="Permanent link">&para;</a></h2>
 <p>The same dataset is used in this example. For a detailed description of the data, see <a href="../basic/#overview-of-data">Overview of Data</a> in <a href="../basic/">Basic Line Chart</a>.</p>
 <h2 id="cubic-spline">Cubic Spline<a class="headerlink" href="#cubic-spline" title="Permanent link">&para;</a></h2>
-<p>There is no built-in function to perform cubic spline interpolation in Kx Deverloper libraries. A version is implemented in <code>.qlib.math.spline</code> according to the wiki page for <a href="https://en.wikipedia.org/wiki/Spline_interpolation">Spline interpolation</a>.</p>
+<p>There is no built-in function to perform cubic spline interpolation in Kx Deverloper libraries. A version is implemented in <code>.math.spline</code> according to the wiki page for <a href="https://en.wikipedia.org/wiki/Spline_interpolation">Spline interpolation</a>.</p>
 <h2 id="final-chart">Final Chart<a class="headerlink" href="#final-chart" title="Permanent link">&para;</a></h2>
 <pre><code class="q">// .line.smoothed.ff
 t1:select quarter,mktshr,x:i,y:mktshr from .line.iexMktShare;
-t2:.qlib.math.spline[t1;`quarter;`mktshr];
+t2:.math.spline[t1;`quarter;`mktshr];
 
 xfmt:{
   i:floor x;
   m:exec quarter from .line.iexMktShare;
   $[0=i mod 2;m i;`]
   };
-yfmt:{`$.qlib.utils.toFixed[1;100*x],&quot;%&quot;};
+yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
 
 .qp.go[600;400;] 
   .qp.title[&quot;Smoothed Line Chart&quot;]
