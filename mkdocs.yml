@@ -54,7 +54,7 @@ site_name: "qPlot - Grammar of Graphics"
 site_url: "https://dpkwhan.github.io/qplot/"
 use_directory_urls: true
 theme:
-  favicon: "assets/img/logo.png"
+  favicon: "assets/img/favicon.png"
   feature:
     tabs: true
   name: "material"
