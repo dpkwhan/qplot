@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://dpkwhan.github.io/qplot/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/line/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/line/basic/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/line/smoothed/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/line/stacked/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dpkwhan.github.io/qplot/examples/area/</loc>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/area/basic/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/bar/simple/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/examples/ex001/</loc>
-     <lastmod>2020-11-14</lastmod>
+     <lastmod>2020-11-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

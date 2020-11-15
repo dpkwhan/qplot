@@ -11,23 +11,23 @@
         <meta name="description" content="qPlot">
       
       
-        <link rel="canonical" href="https://dpkwhan.github.io/qplot/examples/line/smoothed/">
+        <link rel="canonical" href="https://dpkwhan.github.io/qplot/examples/area/">
       
       
         <meta name="author" content="David Han">
       
-      <link rel="shortcut icon" href="../../../assets/img/logo.png">
+      <link rel="shortcut icon" href="../../assets/img/logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
     
     
       
-        <title>Smoothed - qPlot</title>
+        <title>Overview - qPlot</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5d00201e.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.816e8abc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.816e8abc.min.css">
       
       
         
@@ -45,7 +45,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-solarizedlight.min.css">
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smoothed-line-chart" class="md-skip">
+        <a href="#area-chart" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://dpkwhan.github.io/qplot/" title="qPlot" class="md-header-nav__button md-logo" aria-label="qPlot">
       
-  <img src="../../../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -99,7 +99,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Smoothed
+              Overview
             
           </span>
         </div>
@@ -158,7 +158,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://dpkwhan.github.io/qplot/" title="qPlot" class="md-nav__button md-logo" aria-label="qPlot">
       
-  <img src="../../../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     qPlot
@@ -172,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -209,12 +209,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       Line
@@ -238,7 +236,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Overview" class="md-nav__link">
+    <a href="../line/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -250,7 +248,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic/" title="Basic" class="md-nav__link">
+    <a href="../line/basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -260,67 +258,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Smoothed
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Smoothed" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../line/smoothed/" title="Smoothed" class="md-nav__link">
       Smoothed
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cubic-spline" class="md-nav__link">
-    Cubic Spline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-chart" class="md-nav__link">
-    Final Chart
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -330,7 +272,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../stacked/" title="Stacked" class="md-nav__link">
+    <a href="../line/stacked/" title="Stacked" class="md-nav__link">
       Stacked
     </a>
   </li>
@@ -345,10 +287,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
     
     <label class="md-nav__link" for="nav-2-2">
       Area
@@ -370,11 +314,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../area/" title="Overview" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
   </li>
 
         
@@ -384,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../area/basic/" title="Basic" class="md-nav__link">
+    <a href="basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -426,7 +379,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/simple/" title="Simple" class="md-nav__link">
+    <a href="../bar/simple/" title="Simple" class="md-nav__link">
       Simple
     </a>
   </li>
@@ -443,7 +396,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ex001/" title="Example 1" class="md-nav__link">
+    <a href="../ex001/" title="Example 1" class="md-nav__link">
       Example 1
     </a>
   </li>
@@ -455,7 +408,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ex002.md" title="Example 2" class="md-nav__link">
+    <a href="../ex002.md" title="Example 2" class="md-nav__link">
       Example 2
     </a>
   </li>
@@ -483,37 +436,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cubic-spline" class="md-nav__link">
-    Cubic Spline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-chart" class="md-nav__link">
-    Final Chart
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -528,44 +450,23 @@
                   
                 
                 
-                <h1 id="smoothed-line-chart">Smoothed Line Chart<a class="headerlink" href="#smoothed-line-chart" title="Permanent link">&para;</a></h1>
-<p>In this example, we are going to create a smoothed line chart to show the quarterly market share of Investors Exchange in U.S. equities market since it was launched in 2016. The final chart looks like below:</p>
-<p><span style="display:block;text-align:center">
-<img alt="Final Chart" src="../../../assets/img/line.smoothed.step.final.png" />
-</span></p>
-<h2 id="overview-of-data">Overview of Data<a class="headerlink" href="#overview-of-data" title="Permanent link">&para;</a></h2>
-<p>The same dataset is used in this example. For a detailed description of the data, see <a href="../basic/#overview-of-data">Overview of Data</a> in <a href="../basic/">Basic Line Chart</a>.</p>
-<h2 id="cubic-spline">Cubic Spline<a class="headerlink" href="#cubic-spline" title="Permanent link">&para;</a></h2>
-<p>There is no built-in function to perform cubic spline interpolation in Kx Deverloper libraries. A version is implemented in <code>.math.spline</code> according to the wiki page for <a href="https://en.wikipedia.org/wiki/Spline_interpolation">Spline interpolation</a>.</p>
-<h2 id="final-chart">Final Chart<a class="headerlink" href="#final-chart" title="Permanent link">&para;</a></h2>
-<pre><code class="q">// .line.smoothed.ff
-t1:select quarter,mktshr,x:i,y:mktshr from .line.iexMktShare;
-t2:.math.spline[t1;`quarter;`mktshr];
-
-xfmt:{
-  i:floor x;
-  m:exec quarter from .line.iexMktShare;
-  $[0=i mod 2;m i;`]
-  };
-yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
-
-.qp.go[600;400;] 
-  .qp.title[&quot;Smoothed Line Chart&quot;]
-  .qp.stack (
-    .qp.point[t1;`x;`y;] 
-       .qp.s.geom[`size`colour`fill`strokewidth!(2;`red;`white;1)]
-      ,.qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.linear]
-      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
-    .qp.line[t2;`x;`y;] 
-       .qp.s.geom[`fill`decorations!(`blue;0b)]
-      ,.qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-    )
-</code></pre>
-
-<p><span style="display:block;text-align:center">
-<img alt="Final Step" src="../../../assets/img/line.smoothed.step.final.png" />
-</span></p>
+                <h1 id="area-chart">Area Chart<a class="headerlink" href="#area-chart" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="./basic"><img src="../../assets/img/area.basic.step.final.png">Basic Area Chart</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -584,7 +485,7 @@ yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../basic/" title="Basic" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../line/stacked/" title="Stacked" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -593,19 +494,19 @@ yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Basic
+                Stacked
               </div>
             </div>
           </a>
         
         
-          <a href="../stacked/" title="Stacked" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="basic/" title="Basic" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Stacked
+                Basic
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -658,15 +559,15 @@ yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../../..",
+          base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../../assets/javascripts/worker/search.01088dc6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
@@ -679,11 +580,11 @@ yfmt:{`$utils.toFixed[1;100*x],&quot;%&quot;};
       
         <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
       
-        <script src="../../../assets/js/theme.js"></script>
+        <script src="../../assets/js/theme.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
       
-        <script src="../../../assets/js/prism.js"></script>
+        <script src="../../assets/js/prism.js"></script>
       
     
   </body>
