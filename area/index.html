@@ -11,23 +11,23 @@
         <meta name="description" content="qPlot">
       
       
-        <link rel="canonical" href="https://dpkwhan.github.io/qplot/examples/line/stacked/">
+        <link rel="canonical" href="https://dpkwhan.github.io/qplot/area/">
       
       
         <meta name="author" content="David Han">
       
-      <link rel="shortcut icon" href="../../../assets/img/favicon.png">
+      <link rel="shortcut icon" href="../assets/img/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
     
     
       
-        <title>Stacked - qPlot - Grammar of Graphics</title>
+        <title>Overview - qPlot - Grammar of Graphics</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.816e8abc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.816e8abc.min.css">
       
       
         
@@ -45,7 +45,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-solarizedlight.min.css">
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stacked-line-chart" class="md-skip">
+        <a href="#area-chart" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://dpkwhan.github.io/qplot/" title="qPlot - Grammar of Graphics" class="md-header-nav__button md-logo" aria-label="qPlot - Grammar of Graphics">
       
-  <img src="../../../assets/img/logo.png" alt="logo">
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -99,7 +99,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Stacked
+              Overview
             
           </span>
         </div>
@@ -158,7 +158,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://dpkwhan.github.io/qplot/" title="qPlot - Grammar of Graphics" class="md-nav__button md-logo" aria-label="qPlot - Grammar of Graphics">
       
-  <img src="../../../assets/img/logo.png" alt="logo">
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
     qPlot - Grammar of Graphics
@@ -172,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href=".." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -182,48 +182,19 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Examples
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Examples" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Examples
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
-    
-    <label class="md-nav__link" for="nav-2-1">
       Line
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Line" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
+    <nav class="md-nav" aria-label="Line" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -238,7 +209,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Overview" class="md-nav__link">
+    <a href="../line/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -250,7 +221,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic/" title="Basic" class="md-nav__link">
+    <a href="../line/basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -262,11 +233,55 @@
 
 
   <li class="md-nav__item">
-    <a href="../smoothed/" title="Smoothed" class="md-nav__link">
+    <a href="../line/smoothed/" title="Smoothed" class="md-nav__link">
       Smoothed
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../line/stacked/" title="Stacked" class="md-nav__link">
+      Stacked
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Area
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Area" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Area
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -282,113 +297,10 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Stacked
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Stacked" class="md-nav__link md-nav__link--active">
-      Stacked
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-first-attempt" class="md-nav__link">
-    Step 1: First Attempt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-labels-and-values" class="md-nav__link">
-    Step 2: Labels and Values
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-add-markers" class="md-nav__link">
-    Step 3: Add Markers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-final-legend" class="md-nav__link">
-    Step Final: Legend
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Area
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Area" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Area
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../area/" title="Overview" class="md-nav__link">
+    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
   </li>
 
         
@@ -398,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../area/basic/" title="Basic" class="md-nav__link">
+    <a href="basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -408,24 +320,24 @@
     </nav>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-2-3">
+    <label class="md-nav__link" for="nav-4">
       Bar
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Bar" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-3">
+    <nav class="md-nav" aria-label="Bar" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -440,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/basic/" title="Basic" class="md-nav__link">
+    <a href="../bar/basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -452,14 +364,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/multiple/" title="Multiple" class="md-nav__link">
+    <a href="../bar/multiple/" title="Multiple" class="md-nav__link">
       Multiple
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -485,51 +392,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-first-attempt" class="md-nav__link">
-    Step 1: First Attempt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-labels-and-values" class="md-nav__link">
-    Step 2: Labels and Values
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-add-markers" class="md-nav__link">
-    Step 3: Add Markers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-final-legend" class="md-nav__link">
-    Step Final: Legend
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -544,98 +406,23 @@
                   
                 
                 
-                <h1 id="stacked-line-chart">Stacked Line Chart<a class="headerlink" href="#stacked-line-chart" title="Permanent link">&para;</a></h1>
-<p>In this example, we are going to create a stacked line chart to show the yearly market volume of the U.S. equities market between 2011 and 2019. The final chart looks like below:</p>
-<p><span style="display:block;text-align:center">
-<img alt="Final Chart" src="../../../assets/img/line.stacked.step.final.png" />
-</span></p>
-<h2 id="overview-of-data">Overview of Data<a class="headerlink" href="#overview-of-data" title="Permanent link">&para;</a></h2>
-<p>The table <code>.line.mktVolume</code> has the following schema:</p>
-<div class="highlight"><pre><span></span><code>c       | t f a
---------| -----
-year    | j    
-exchange| s    
-shares  | f
-</code></pre></div>
-
-<p>The first 3 rows from the table are as shown below.</p>
-<div class="highlight"><pre><span></span><code>year exchange      shares       
---------------------------------
-2019 NYSE Chicago  7.923022e+009
-2019 NYSE National 2.48449e+010 
-2019 TRF           6.601719e+011
-</code></pre></div>
-
-<h2 id="step-1-first-attempt">Step 1: First Attempt<a class="headerlink" href="#step-1-first-attempt" title="Permanent link">&para;</a></h2>
-<p>In this step, we simply calculate the cumulative volume traded by each exchange in each year and create a stacked line chart. Notice we sort the data by year and exchange first before the cumulative volume is calculated. A line is plotted for each exchange against year.</p>
-<pre><code class="q">t:0!update sums shares by year from 
-  `year`exchange xasc select from .line.mktVolume;
-
-.qp.go[600;400;]
-  .qp.line[t;`year;`shares;] 
-    .qp.s.aes[`group`fill; `exchange`exchange]
-</code></pre>
-
-<p>Without any customization, the stacked line chart is shown as below:</p>
-<p><span style="display:block;text-align:center">
-<img alt="Step 1" src="../../../assets/img/line.stacked.step.01.png" />
-</span></p>
-<p>There are a couple of aspects we can improve upon this chart:</p>
-<ul>
-<li>Customize the axis labels</li>
-<li>Transform the <em>y</em>-axis values to display them properly</li>
-<li>Adjust the width and height of legend to make it less crowded</li>
-<li>Add markers to the data points</li>
-</ul>
-<h2 id="step-2-labels-and-values">Step 2: Labels and Values<a class="headerlink" href="#step-2-labels-and-values" title="Permanent link">&para;</a></h2>
-<p>First we convert the numerical year into a string to avoid the decimal digits as shown on the <em>x</em>-axis from the previous step. The volume is multiplied by 1e-9 to convert to billion shares. With these two changes, we use <code>.qp.s.labels</code> to customize the labels on both axis.</p>
-<pre><code class="q">t:0!update sums shares by year from 
-  `year`exchange xasc select from .line.mktVolume;
-t:update string year,shares:shares*1e-9 from t;
-
-.qp.go[600;400;] 
-  .qp.line[t;`year;`shares;] 
-    .qp.s.aes[`group`fill; `exchange`exchange]
-   ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
-</code></pre>
-
-<p><span style="display:block;text-align:center">
-<img alt="Step 2" src="../../../assets/img/line.stacked.step.02.png" />
-</span></p>
-<h2 id="step-3-add-markers">Step 3: Add Markers<a class="headerlink" href="#step-3-add-markers" title="Permanent link">&para;</a></h2>
-<p>A simple vanilla marker can be added to indicate the actual data points. </p>
-<pre><code class="q">t:0!update sums shares by year from 
-  `year`exchange xasc select from .line.mktVolume;
-t:update string year,shares:shares*1e-9 from t;
-
-.qp.go[600;400;] 
-  .qp.line[t;`year;`shares;] 
-     .qp.s.aes[`group`fill; `exchange`exchange]
-    ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
-    ,.qp.s.geom[`size`colour`decorations!(2;`red;1b)]
-</code></pre>
-
-<p><span style="display:block;text-align:center">
-<img alt="Step 2" src="../../../assets/img/line.stacked.step.03.png" />
-</span></p>
-<h2 id="step-final-legend">Step Final: Legend<a class="headerlink" href="#step-final-legend" title="Permanent link">&para;</a></h2>
-<p><code>qp.theme</code> is used to customize the legend. Here in this example, we provide a customized width (<code>legend_width</code>) and height (<code>legend_height</code>) to make the legend less crowded and make the full text visible.</p>
-<pre><code class="q">t:0!update sums shares by year from 
-  `year`exchange xasc select from .line.mktVolume;
-t:update string year,shares:shares*1e-9 from t;
-
-.qp.go[600;400;] 
-  .qp.theme[`legend_header_background_fill`legend_padding_top`legend_height`legend_width!(`white;0;300;110)]
-  .qp.title[&quot;U.S. Equities Market Volume between 2011 and 2019&quot;]
-    .qp.line[t;`year;`shares;] 
-       .qp.s.aes[`group`fill; `exchange`exchange]
-      ,.qp.s.geom[`size`colour`decorations!(2;`red;1b)]
-      ,.qp.s.labels[`x`y!(`Year;`$&quot;Market Volume (billion shares)&quot;)]
-</code></pre>
-
-<p><span style="display:block;text-align:center">
-<img alt="Final Step" src="../../../assets/img/line.stacked.step.final.png" />
-</span></p>
+                <h1 id="area-chart">Area Chart<a class="headerlink" href="#area-chart" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="./basic"><img src="../assets/img/area.basic.step.final.png">Basic Area Chart</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -654,7 +441,7 @@ t:update string year,shares:shares*1e-9 from t;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../smoothed/" title="Smoothed" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../line/stacked/" title="Stacked" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -663,19 +450,19 @@ t:update string year,shares:shares*1e-9 from t;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Smoothed
+                Stacked
               </div>
             </div>
           </a>
         
         
-          <a href="../../area/" title="Overview" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="basic/" title="Basic" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Basic
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -728,15 +515,15 @@ t:update string year,shares:shares*1e-9 from t;
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../../..",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
@@ -749,11 +536,11 @@ t:update string year,shares:shares*1e-9 from t;
       
         <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
       
-        <script src="../../../assets/js/theme.js"></script>
+        <script src="../assets/js/theme.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
       
-        <script src="../../../assets/js/prism.js"></script>
+        <script src="../assets/js/prism.js"></script>
       
     
   </body>

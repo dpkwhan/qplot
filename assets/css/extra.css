@@ -1,10 +1,10 @@
 .markdown-section {
-  max-width: 98%;
+  max-width: 90%;
 }
 
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
-    max-width: 98%;
+    max-width: 90%;
   }
 
   .md-sidebar--primary {
