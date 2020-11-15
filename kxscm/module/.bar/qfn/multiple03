@@ -4,14 +4,16 @@
 //
 // @fileOverview Creates a basic bar chart using data from a single day.
 //
+// @param dt {date} A date
+//
 // @example Create and render a bar chart specification using data from a single day:
-// .qp.go[600;400;] .ex001.f11
+// .qp.go[600;400;] .bar.multiple03 2020.11.03
 //
 // @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
 
-{
-  .qp.vertical(
-    .ex001.f10 2016;
-    .ex001.f10 2020
-    )
+{[dt]
+  t:select from .bar.mktVolumeDist where date=dt;
+  t:update `$string time from t;
+  
+  .qp.bar[t;`time;`volpct;] .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
   }

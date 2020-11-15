@@ -19,6 +19,6 @@
 //   points for the last 5 minutes before market close.
 //
 // @example Retrieve data for a single date
-// select from .ex001.data where date=2020.11.03
+// select from .bar.mktVolumeDist where date=2020.11.03
 
-("DUF";enlist csv) 0:read0 `:.ex001/data.csv
+("DUF";enlist csv) 0:read0 `:.bar/mktVolumeDist.csv

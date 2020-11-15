@@ -1,0 +1,35 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Creates a basic bar chart using data from a single day.
+//
+// @param yyyy {long} A year
+//
+// @example Create and render a bar chart specification using data from a single day:
+// .qp.go[600;400;] .bar.multiple10 2020
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{[yyyy]
+  t:select from .bar.mktVolumeDist where yyyy=`year$date;
+  t:update .qdate.print["%b %e";] each date,`$string time from t;
+  xfmt:{$[-17h=type x;`;x=`$"09:29";`Open;x=`$"16:00";`Close;x]};
+  yfmt:{`$string[floor 0.5+100*x],"%"};
+  ll:reverse exec distinct date from t; / legend label
+  
+  .qp.title["Market Volume Distribution around Auctions: ",string yyyy]
+  .qp.theme[`legend_header_background_fill`legend_padding_top!(`white;-20)]
+  .qp.stack (
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``position!(::;`dodge)]
+      ,.qp.s.aes[`fill`group;`date`date]
+      ,.qp.s.theme[``legend_use!(::;0b)]
+      ,.qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;.gg.scale.linear]];
+    .qp.vline[12:00;]
+       .qp.s.labels[`x`y!(`Time;`$"Share Volume (%)")]
+      ,.qp.s.legend["";ll!count[ll]#.gg.colour.cat10]
+    )
+  }
