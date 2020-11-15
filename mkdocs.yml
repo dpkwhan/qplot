@@ -77,6 +77,5 @@ nav:
         - Overview: examples/area/index.md
         - Basic: examples/area/basic.md
       - Bar:
-        - Simple: examples/bar/simple.md
-      - Example 1: examples/ex001.md
-      - Example 2: examples/ex002.md
+        - Basic: examples/bar/basic.md
+        - Multiple: examples/bar/multiple.md
