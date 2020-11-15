@@ -67,15 +67,14 @@ theme:
 
 nav:
   - Home: index.md
-  - Examples:
-      - Line:
-        - Overview: examples/line/index.md
-        - Basic: examples/line/basic.md
-        - Smoothed: examples/line/smoothed.md
-        - Stacked: examples/line/stacked.md
-      - Area:
-        - Overview: examples/area/index.md
-        - Basic: examples/area/basic.md
-      - Bar:
-        - Basic: examples/bar/basic.md
-        - Multiple: examples/bar/multiple.md
+  - Line:
+    - Overview: line/index.md
+    - Basic: line/basic.md
+    - Smoothed: line/smoothed.md
+    - Stacked: line/stacked.md
+  - Area:
+    - Overview: area/index.md
+    - Basic: area/basic.md
+  - Bar:
+    - Basic: bar/basic.md
+    - Multiple: bar/multiple.md

@@ -3,7 +3,7 @@
 In this example, we are going to create a smoothed line chart to show the quarterly market share of Investors Exchange in U.S. equities market since it was launched in 2016. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/line.smoothed.step.final.png)
+![Final Chart](../assets/img/line.smoothed.step.final.png)
 </span>
 
 ## Overview of Data
@@ -41,5 +41,5 @@ yfmt:{`$utils.toFixed[1;100*x],"%"};
 ```
 
 <span style="display:block;text-align:center">
-![Final Step](../../assets/img/line.smoothed.step.final.png)
+![Final Step](../assets/img/line.smoothed.step.final.png)
 </span>

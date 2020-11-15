@@ -3,7 +3,7 @@
 In this example, we are going to create a bar chart to show and contrast the equities volume distribution around open and close auctions before, on and after the presidential election days in the United States in 2016 and 2020. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/bar.multiple.step.final.png)
+![Final Chart](../assets/img/bar.multiple.step.final.png)
 </span>
 
 ## Overview of Data
@@ -35,7 +35,7 @@ t:select from .ex001.data where date=2020.11.03;
 The above vanilla code creates a basic bar chart using data from November 3, 2020. The chart is as follows:
 
 <span style="display:block;text-align:center">
-![Step 1](../../assets/img/bar.multiple.step.01.png)
+![Step 1](../assets/img/bar.multiple.step.01.png)
 </span>
 
 One immediate problem with the chart above is that the bars are clustered at the two sides of the chart because the dataset only contains the data around open auction at 09:30 and close auction at 16:00. This leaves a huge empty space between the two clusters and make the chart really hard to read.
@@ -53,7 +53,7 @@ t:update `$string time from t;
 With this change in place, the bar chart looks much better.
 
 <span style="display:block;text-align:center">
-![Step 2](../../assets/img/bar.multiple.step.02.png)
+![Step 2](../assets/img/bar.multiple.step.02.png)
 </span>
 
 ## Step 3: Update Axis Labels
@@ -71,7 +71,7 @@ t:update `$string time from t;
 Now the bar chart looks like this:
 
 <span style="display:block;text-align:center">
-![Step 3](../../assets/img/bar.multiple.step.03.png)
+![Step 3](../assets/img/bar.multiple.step.03.png)
 </span>
 
 ## Step 4: Customize Tick Values
@@ -90,7 +90,7 @@ yfmt:{`$string[floor 0.5+100*x],"%"};
 A function ``yfmt`` is defined to format a float number as percentage. 
 
 <span style="display:block;text-align:center">
-![Step 4](../../assets/img/bar.multiple.step.04.png)
+![Step 4](../assets/img/bar.multiple.step.04.png)
 </span>
 
 ## Step 5: Add Vertical Line
@@ -112,7 +112,7 @@ yfmt:{`$string[floor 0.5+100*x],"%"};
 We add a vertical line and stack the bar and line on top of each other to produce the chart like below. As you can see that I use ``12:00`` as the *x*-axis value in this example. Actually any value between ``09:34`` and ``15:55`` suffices. 
 
 <span style="display:block;text-align:center">
-![Step 5](../../assets/img/bar.multiple.step.05.png)
+![Step 5](../assets/img/bar.multiple.step.05.png)
 </span>
 
 ## Step 6: Remove Tick Value
@@ -142,7 +142,7 @@ yfmt:{`$string[floor 0.5+100*x],"%"};
 After a x-axis tick formatter is added, the bar chart looks much better.
 
 <span style="display:block;text-align:center">
-![Step 6](../../assets/img/bar.multiple.step.06.png)
+![Step 6](../assets/img/bar.multiple.step.06.png)
 </span>
 
 ## Step 7: Fix Axis Labels
@@ -166,7 +166,7 @@ yfmt:{`$string[floor 0.5+100*x],"%"};
 ```
 
 <span style="display:block;text-align:center">
-![Step 7](../../assets/img/bar.multiple.step.07.png)
+![Step 7](../assets/img/bar.multiple.step.07.png)
 </span>
 
 ## Step 8: Plot Multiple Bars
@@ -196,7 +196,7 @@ The chart below has three days of data, but there are a few problems with it:
 - The color of the legend is a gradient from a color spectrum. It is not easy to distinguish them.
 
 <span style="display:block;text-align:center">
-![Step 8](../../assets/img/bar.multiple.step.08.png)
+![Step 8](../assets/img/bar.multiple.step.08.png)
 </span>
 
 ## Step 9: Improve the Legends
@@ -224,7 +224,7 @@ yfmt:{`$string[floor 0.5+100*x],"%"};
 With the changes above, the color looks nicer and the legend label is clear and clean.
 
 <span style="display:block;text-align:center">
-![Step 9](../../assets/img/bar.multiple.step.09.png)
+![Step 9](../assets/img/bar.multiple.step.09.png)
 </span>
 
 ## Step 10: Remove Legend Title
@@ -258,7 +258,7 @@ ll:reverse exec distinct date from t; / legend label
 ```
 
 <span style="display:block;text-align:center">
-![Step 10](../../assets/img/bar.multiple.step.10.png)
+![Step 10](../assets/img/bar.multiple.step.10.png)
 </span>
 
 ## Step Final: Split Charts
@@ -272,7 +272,7 @@ ll:reverse exec distinct date from t; / legend label
 ```
 
 <span style="display:block;text-align:center">
-![Step 11](../../assets/img/bar.multiple.step.final.png)
+![Step 11](../assets/img/bar.multiple.step.final.png)
 </span>
 
 ## Variations of Flavor
@@ -307,7 +307,7 @@ ll:reverse exec distinct date from t; / legend label
 And the chart look like this:
 
 <span style="display:block;text-align:center">
-![Variation 1](../../assets/img/bar.multiple.step.v1.png)
+![Variation 1](../assets/img/bar.multiple.step.v1.png)
 </span>
 
 ### Color of the divider
@@ -341,7 +341,7 @@ ll:reverse exec distinct date from t; / legend label
 The chart below indicates the color of the divider is changed to be blue.
 
 <span style="display:block;text-align:center">
-![Variation 2](../../assets/img/bar.multiple.step.v2.png)
+![Variation 2](../assets/img/bar.multiple.step.v2.png)
 </span>
 
 ### Same *y*-axis
@@ -383,7 +383,7 @@ To make it easier to compare the change of volume distribution year over year, t
 After forcing the same *y*-axis, the two sub-plots have the same maximum tick label of 6%.
 
 <span style="display:block;text-align:center">
-![Variation 3](../../assets/img/bar.multiple.step.v3.png)
+![Variation 3](../assets/img/bar.multiple.step.v3.png)
 </span>
 
 [DateParser]: https://code.kx.com/developer/libraries/date-parser/

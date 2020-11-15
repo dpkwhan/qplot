@@ -3,7 +3,7 @@
 In this example, we are going to create a basic line chart to show the quarterly market share of Investors Exchange in U.S. equities market since it was launched in 2016. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/line.basic.step.final.png)
+![Final Chart](../assets/img/line.basic.step.final.png)
 </span>
 
 ## Overview of Data
@@ -34,7 +34,7 @@ Let's get started with our first attempt to plot a line of market share against 
 A basic line chart is created as below.
 
 <span style="display:block;text-align:center">
-![Step 1](../../assets/img/line.basic.step.01.png)
+![Step 1](../assets/img/line.basic.step.01.png)
 </span>
 
 There are a few places we can do better to improve this basic line chart:
@@ -59,7 +59,7 @@ By default, the column names are used as the axis labels. In this step, I will s
 By adding the last line in the above code snippet, the labels on both *x*-axis and *y*-axis look much nicer.
 
 <span style="display:block;text-align:center">
-![Step 2](../../assets/img/line.basic.step.02.png)
+![Step 2](../assets/img/line.basic.step.02.png)
 </span>
 
 ## Step 3: Tick Values
@@ -83,7 +83,7 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],"%"};
 The last two lines with ``.qp.s.scale`` customize the look of tick values on both *x*-axis and *y*-axis.
 
 <span style="display:block;text-align:center">
-![Step 3](../../assets/img/line.basic.step.03.png)
+![Step 3](../assets/img/line.basic.step.03.png)
 </span>
 
 ## Step 4: Data Points
@@ -104,7 +104,7 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],"%"};
 The geometry setting ``.qp.s.geom`` above enables displaying the points and sets the color of the line and points to blue.
 
 <span style="display:block;text-align:center">
-![Step 4](../../assets/img/line.basic.step.04.png)
+![Step 4](../assets/img/line.basic.step.04.png)
 </span>
 
 ## Step Final: Customize the Points
@@ -136,5 +136,5 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],"%"};
 Here is the final line chart with data points. A title is also added into the chart.
 
 <span style="display:block;text-align:center">
-![Final Step](../../assets/img/line.basic.step.final.png)
+![Final Step](../assets/img/line.basic.step.final.png)
 </span>

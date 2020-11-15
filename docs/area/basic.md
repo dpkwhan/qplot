@@ -2,7 +2,7 @@
 In this example, we are going to create a basic area chart to show the daily sales revenue of a coffee shop over a week. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/area.basic.step.final.png)
+![Final Chart](../assets/img/area.basic.step.final.png)
 </span>
 
 ## Overview of Data
@@ -32,7 +32,7 @@ The function [``.qp.area``](https://code.kx.com/developer/libraries/grammar-of-g
 ```
 
 <span style="display:block;text-align:center">
-![Step 1](../../assets/img/area.basic.step.01.png)
+![Step 1](../assets/img/area.basic.step.01.png)
 </span>
 
 There are a few improvements on this area chart we can make:
@@ -51,7 +51,7 @@ The last line with [``.qp.s.labels``](https://code.kx.com/developer/libraries/gr
 ```
 
 <span style="display:block;text-align:center">
-![Step 2](../../assets/img/area.basic.step.02.png)
+![Step 2](../assets/img/area.basic.step.02.png)
 </span>
 
 ## Step 3: Format Tick Values
@@ -67,7 +67,7 @@ fmt:{"$",reverse "," sv 0N 3#reverse string x};
 ```
 
 <span style="display:block;text-align:center">
-![Step 3](../../assets/img/area.basic.step.03.png)
+![Step 3](../assets/img/area.basic.step.03.png)
 </span>
 
 ## Step 4: Reorder *x*-Axis Values
@@ -86,7 +86,7 @@ fmt:{"$",reverse "," sv 0N 3#reverse string x};
 After adding the last line in code above, the data is displayed properly from Monday to Sunday.
 
 <span style="display:block;text-align:center">
-![Step 4](../../assets/img/area.basic.step.04.png)
+![Step 4](../assets/img/area.basic.step.04.png)
 </span>
 
 ## Step 5: Start the Scale at Zero
@@ -103,7 +103,7 @@ fmt:{"$",reverse "," sv 0N 3#reverse string x};
 ```
 
 <span style="display:block;text-align:center">
-![Step 5](../../assets/img/area.basic.step.05.png)
+![Step 5](../assets/img/area.basic.step.05.png)
 </span>
 
 ## Step 6: Customize Break Points
@@ -122,7 +122,7 @@ fmt:{"$",reverse "," sv 0N 3#reverse string x};
 ```
 
 <span style="display:block;text-align:center">
-![Step 6](../../assets/img/area.basic.step.06.png)
+![Step 6](../assets/img/area.basic.step.06.png)
 </span>
 
 ## Step Final: Change Area Color
@@ -143,5 +143,5 @@ fmt:{"$",reverse "," sv 0N 3#reverse string x};
 ```
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/area.basic.step.final.png)
+![Final Chart](../assets/img/area.basic.step.final.png)
 </span>

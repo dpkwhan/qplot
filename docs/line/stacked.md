@@ -3,7 +3,7 @@
 In this example, we are going to create a stacked line chart to show the yearly market volume of the U.S. equities market between 2011 and 2019. The final chart looks like below:
 
 <span style="display:block;text-align:center">
-![Final Chart](../../assets/img/line.stacked.step.final.png)
+![Final Chart](../assets/img/line.stacked.step.final.png)
 </span>
 
 ## Overview of Data
@@ -38,7 +38,7 @@ t:0!update sums shares by year from
 Without any customization, the stacked line chart is shown as below:
 
 <span style="display:block;text-align:center">
-![Step 1](../../assets/img/line.stacked.step.01.png)
+![Step 1](../assets/img/line.stacked.step.01.png)
 </span>
 
 There are a couple of aspects we can improve upon this chart:
@@ -63,7 +63,7 @@ t:update string year,shares:shares*1e-9 from t;
 ```
 
 <span style="display:block;text-align:center">
-![Step 2](../../assets/img/line.stacked.step.02.png)
+![Step 2](../assets/img/line.stacked.step.02.png)
 </span>
 
 ## Step 3: Add Markers
@@ -82,7 +82,7 @@ t:update string year,shares:shares*1e-9 from t;
 ```
 
 <span style="display:block;text-align:center">
-![Step 2](../../assets/img/line.stacked.step.03.png)
+![Step 2](../assets/img/line.stacked.step.03.png)
 </span>
 
 ## Step Final: Legend
@@ -103,5 +103,5 @@ t:update string year,shares:shares*1e-9 from t;
 ```
 
 <span style="display:block;text-align:center">
-![Final Step](../../assets/img/line.stacked.step.final.png)
+![Final Step](../assets/img/line.stacked.step.final.png)
 </span>
