@@ -1,0 +1,14 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a basic area chart.
+//
+// @example Create and render an area chart specification:
+// .qp.go[600;400;] .area.basic01[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{[]
+  .qp.area[.area.salesRevenue;`dow;`revenue;::]
+  }

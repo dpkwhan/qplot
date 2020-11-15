@@ -1,0 +1,21 @@
+// @kind data
+//
+// @fileoverview This table contains the revenue of a coffee shop in one week. It has the following table schema:
+// 
+//     c      | t f a
+//     -------| -----
+//     dow    | s    
+//     revenue| j 
+//
+// A snippet of the data looks like:
+//
+//     dow revenue
+//     -----------
+//     Mon 820    
+//     Tue 932    
+//     Wed 901 
+//
+// @example Retrieve the data
+// select from .area.salesRevenue
+
+("SJ";enlist csv) 0:read0 `:.area/salesRevenue.csv

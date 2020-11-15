@@ -1,0 +1,23 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a basic area chart.
+//
+// @example Create and render an area chart specification:
+// .qp.go[600;400;] .area.basicFinal[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{[]
+  fmt:{"$",reverse "," sv 0N 3#reverse string x};
+  
+  .qp.area[.area.salesRevenue;`dow;`revenue;]
+     .qp.s.geom[``fill!(::;`red)]
+    ,.qp.s.labels[`x`y!(`;`$"Daily Sales Revenue")]
+    ,.qp.s.scale[`y;.gg.scale.format[fmt] 
+                    .gg.scale.limits[0 0N] 
+                    .gg.scale.breaks[200*til 7] 
+                    .gg.scale.linear]
+    ,.qp.s.scale[`x;.gg.scale.categorical[{`Mon`Tue`Wed`Thu`Fri`Sat`Sun}]]
+  }
