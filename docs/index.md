@@ -1,5 +1,5 @@
 <span style="display:block;text-align:center">
-![Logo](../assets/img/logo2.png)
+![Logo](./assets/img/logo2.png)
 </span>
 
 # Mission Statement
