@@ -351,9 +351,77 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Basic
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Basic" class="md-nav__link md-nav__link--active">
       Basic
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-data" class="md-nav__link">
+    Overview of Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-initial-attempt" class="md-nav__link">
+    Step 1: Initial Attempt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-customize-labels" class="md-nav__link">
+    Step 2: Customize Labels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-rotate-tick-values" class="md-nav__link">
+    Step 3: Rotate Tick Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-sort-the-bar" class="md-nav__link">
+    Step 4: Sort the Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-step-update-bar-color" class="md-nav__link">
+    Final Step: Update Bar Color
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -392,6 +460,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-data" class="md-nav__link">
+    Overview of Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-initial-attempt" class="md-nav__link">
+    Step 1: Initial Attempt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-customize-labels" class="md-nav__link">
+    Step 2: Customize Labels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-rotate-tick-values" class="md-nav__link">
+    Step 3: Rotate Tick Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-sort-the-bar" class="md-nav__link">
+    Step 4: Sort the Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-step-update-bar-color" class="md-nav__link">
+    Final Step: Update Bar Color
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -407,6 +527,143 @@
                 
                 
                 <h1 id="simple-bar-chart">Simple Bar Chart<a class="headerlink" href="#simple-bar-chart" title="Permanent link">&para;</a></h1>
+<p>In this example, we are going to create a basic bar chart to show the market share of all exchanges in the U.S. equities market on November 17, 2020. The final chart looks like below:</p>
+<p><span style="display:block;text-align:center">
+<img alt="Final Chart" src="../../assets/img/bar.basic.step.final.png" />
+</span></p>
+<h2 id="overview-of-data">Overview of Data<a class="headerlink" href="#overview-of-data" title="Permanent link">&para;</a></h2>
+<p>The table <code>.bar.mktShare20201117</code> has the following schema:</p>
+<div class="highlight"><pre><span></span><code>c       | t f a
+--------| -----
+exchange| s    
+mktShare| f
+</code></pre></div>
+
+<p>The first 3 rows from the table are as shown below.</p>
+<div class="highlight"><pre><span></span><code>exchange  mktShare  
+--------------------
+CBOE BYX  0.01644091
+CBOE BZX  0.04529426
+CBOE EDGA 0.01375766
+</code></pre></div>
+
+<p>The first column <code>exchange</code> is the name of each trading venue and the second column <code>mktShare</code> is the market share on Nov 17, 2020.</p>
+<h2 id="step-1-initial-attempt">Step 1: Initial Attempt<a class="headerlink" href="#step-1-initial-attempt" title="Permanent link">&para;</a></h2>
+<p>A basic bar chart is implemented by <a href="https://code.kx.com/developer/libraries/grammar-of-graphics-geometries/#qpbar"><code>.qp.bar</code></a>. The code below shows an example of vanilla bar chart without any customization.</p>
+<pre><code class="q">// .bar.basic01
+.qp.go[600;400;]
+  .qp.bar[.bar.mktShare20201117;`exchange;`mktShare;::]
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 1" src="../../assets/img/bar.basic.step.01.png" />
+</span></p>
+<p>There are a couple of areas we can improve this bar chart:</p>
+<ul>
+<li>Customize the look of both axis labels</li>
+<li>Show the <em>y</em>-axis tick values as percentage</li>
+<li>Rotate the <em>x</em>-axis tick values to make them more readable</li>
+<li>Sort the bar chart from the largest to the smallest according to market share</li>
+</ul>
+<h2 id="step-2-customize-labels">Step 2: Customize Labels<a class="headerlink" href="#step-2-customize-labels" title="Permanent link">&para;</a></h2>
+<p>In this step, we customize the axis labels and the tick values on the <em>y</em>-axis. Specifically,</p>
+<ul>
+<li>Change the <em>y</em>-axis label to <code>Market Share (%)</code></li>
+<li>Remove the <em>x</em>-axis labels</li>
+<li>Format the scale on the <em>y</em>-axis as percentage</li>
+</ul>
+<pre><code class="q">// .bar.basic02
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.bar[.bar.mktShare20201117;`exchange;`mktShare;]
+     .qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+    ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 2" src="../../assets/img/bar.basic.step.02.png" />
+</span></p>
+<h2 id="step-3-rotate-tick-values">Step 3: Rotate Tick Values<a class="headerlink" href="#step-3-rotate-tick-values" title="Permanent link">&para;</a></h2>
+<p>The function <a href="https://code.kx.com/developer/libraries/grammar-of-graphics-geometries/#qpbar"><code>.qp.bar</code></a> does not provide a property in its settings to rotate the tick values. We provide a way to achieve this by using <a href="https://code.kx.com/developer/libraries/grammar-of-graphics-geometries/#qptext"><code>.qp.text</code></a> to superimpose text annotation to the bar chart. The following changes are put into place:</p>
+<ul>
+<li>Remove the original tick values on the <em>x</em>-axis</li>
+<li>Customize the <em>x</em>-axis tick values by text annotations</li>
+<li>Align the tick values to the left and rotate by 70 degrees</li>
+<li>Add more space to the bottom of the chart for the display exchange names</li>
+</ul>
+<pre><code class="q">// .bar.basic03
+t:update y:0 from .bar.mktShare20201117;
+xfmt:{&quot;&quot;};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.theme[``padding_bottom!(::;50)]
+  .qp.stack (
+    .qp.bar[t;`exchange;`mktShare;]
+       .qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.categorical[]];
+    .qp.text[t;`exchange;`y;`exchange]
+       .qp.s.geom[`offsety`align`size`angle!(10;`left;12;70)]
+      ,.qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 3" src="../../assets/img/bar.basic.step.03.png" />
+</span></p>
+<h2 id="step-4-sort-the-bar">Step 4: Sort the Bar<a class="headerlink" href="#step-4-sort-the-bar" title="Permanent link">&para;</a></h2>
+<p>To sort the bar in a descending order, we need to make a few changes:</p>
+<ul>
+<li>Sort the original table by market share in descending order</li>
+<li>Use the row index as the value for the <em>x</em>-axis. Note that the bar chart will be automatically sorted in ascending order if the <em>x</em>-axis values are of categorical type.</li>
+</ul>
+<pre><code class="q">// .bar.basic04
+t:update x:i,y:0 from `mktShare xdesc .bar.mktShare20201117;
+xfmt:{&quot;&quot;};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.theme[``padding_bottom!(::;50)]
+  .qp.stack (
+    .qp.bar[t;`x;`mktShare;]
+       .qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.categorical[]];
+    .qp.text[t;`x;`y;`exchange]
+       .qp.s.geom[`offsety`align`size`angle!(10;`left;12;70)]
+      ,.qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Step 4" src="../../assets/img/bar.basic.step.04.png" />
+</span></p>
+<h2 id="final-step-update-bar-color">Final Step: Update Bar Color<a class="headerlink" href="#final-step-update-bar-color" title="Permanent link">&para;</a></h2>
+<p>Now we change the bar color to navy blue to conclude this example.</p>
+<pre><code class="q">// .bar.basicFinal
+t:update x:i,y:0 from `mktShare xdesc .bar.mktShare20201117;
+xfmt:{&quot;&quot;};
+yfmt:{`$string[floor 0.5+100*x],&quot;%&quot;};
+
+.qp.go[600;400;]
+  .qp.theme[``padding_bottom!(::;50)]
+  .qp.stack (
+    .qp.bar[t;`x;`mktShare;]
+       .qp.s.geom[``fill!(::;0x0070cd)]
+      ,.qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.categorical[]];
+    .qp.text[t;`x;`y;`exchange]
+       .qp.s.geom[`offsety`align`size`angle!(10;`left;12;70)]
+      ,.qp.s.labels[`x`y!(&quot;&quot;;&quot;Market Share (%)&quot;)]
+    )
+</code></pre>
+
+<p><span style="display:block;text-align:center">
+<img alt="Final Chart" src="../../assets/img/bar.basic.step.final.png" />
+</span></p>
                 
               
               
