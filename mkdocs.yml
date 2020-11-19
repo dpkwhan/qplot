@@ -76,5 +76,7 @@ nav:
     - Overview: area/index.md
     - Basic: area/basic.md
   - Bar:
+    - Overview: bar/index.md
     - Basic: bar/basic.md
     - Multiple: bar/multiple.md
+    - Data Labels: bar/data_labels.md
