@@ -1,0 +1,20 @@
+// @kind data
+//
+// @fileoverview This data table contains the market share of different trading venues in the U.S. 
+//  equities market on November 17, 2020. It has the following table schema:
+//
+//     c       | t f a
+//     --------| -----
+//     exchange| s    
+//     mktShare| f 
+//
+// A few notes about this data:
+//
+// - The "exchange" TRF is not actually an exchange, which actually includes all the off-market 
+//   trading volume, which includes ATSs, non-ATS, internal crossing networks.
+// - The ``mktShare`` column is the market share, *i.e.* 0.156 means 15.6%.
+//
+// @example Retrieve the market share of NYSE
+// select from .bar.mktShare20201117 where exchange=`NYSE
+
+("SF";enlist csv) 0:read0 `:.bar/mktShare20201117.csv

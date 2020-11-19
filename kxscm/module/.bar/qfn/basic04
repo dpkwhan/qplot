@@ -1,0 +1,27 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Creates a basic bar chart.
+//
+// @example Create and render a bar chart specification:
+// .qp.go[600;400;] .bar.basic04[]
+//
+// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+
+{
+  t:update x:i,y:0 from `mktShare xdesc .bar.mktShare20201117;
+  xfmt:{""};
+  yfmt:{`$string[floor 0.5+100*x],"%"};
+  
+  .qp.theme[``padding_bottom!(::;50)]
+  .qp.stack (
+    .qp.bar[t;`x;`mktShare;]
+       .qp.s.labels[`x`y!("";"Market Share (%)")]
+      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
+      ,.qp.s.scale[`x;.gg.scale.format[xfmt;] .gg.scale.categorical[]];
+    .qp.text[t;`x;`y;`exchange]
+       .qp.s.geom[`offsety`align`size`angle!(10;`left;12;70)]
+      ,.qp.s.labels[`x`y!("";"Market Share (%)")]
+    )
+  }
