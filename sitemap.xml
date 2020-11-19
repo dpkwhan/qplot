@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://dpkwhan.github.io/qplot/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/line/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/line/basic/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/line/smoothed/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/line/stacked/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/area/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/area/basic/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dpkwhan.github.io/qplot/bar/</loc>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/bar/basic/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dpkwhan.github.io/qplot/bar/multiple/</loc>
-     <lastmod>2020-11-18</lastmod>
+     <lastmod>2020-11-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dpkwhan.github.io/qplot/bar/data_labels/</loc>
+     <lastmod>2020-11-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

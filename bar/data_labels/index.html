@@ -11,7 +11,7 @@
         <meta name="description" content="qPlot">
       
       
-        <link rel="canonical" href="https://dpkwhan.github.io/qplot/line/basic/">
+        <link rel="canonical" href="https://dpkwhan.github.io/qplot/bar/data_labels/">
       
       
         <meta name="author" content="David Han">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Basic - qPlot - Grammar of Graphics</title>
+        <title>Data Labels - qPlot - Grammar of Graphics</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-line-chart" class="md-skip">
+        <a href="#bar-chart-with-data-labels" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Basic
+              Data Labels
             
           </span>
         </div>
@@ -182,12 +182,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Line
@@ -211,7 +209,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Overview" class="md-nav__link">
+    <a href="../../line/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -221,88 +219,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Basic
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Basic" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../line/basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-first-attempt" class="md-nav__link">
-    Step 1: First Attempt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-axis-labels" class="md-nav__link">
-    Step 2: Axis Labels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-tick-values" class="md-nav__link">
-    Step 3: Tick Values
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-data-points" class="md-nav__link">
-    Step 4: Data Points
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-final-customize-the-points" class="md-nav__link">
-    Step Final: Customize the Points
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -312,7 +233,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smoothed/" title="Smoothed" class="md-nav__link">
+    <a href="../../line/smoothed/" title="Smoothed" class="md-nav__link">
       Smoothed
     </a>
   </li>
@@ -324,7 +245,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../stacked/" title="Stacked" class="md-nav__link">
+    <a href="../../line/stacked/" title="Stacked" class="md-nav__link">
       Stacked
     </a>
   </li>
@@ -393,10 +314,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Bar
@@ -420,7 +343,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/" title="Overview" class="md-nav__link">
+    <a href="../" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -432,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/basic/" title="Basic" class="md-nav__link">
+    <a href="../basic/" title="Basic" class="md-nav__link">
       Basic
     </a>
   </li>
@@ -444,7 +367,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bar/multiple/" title="Multiple" class="md-nav__link">
+    <a href="../multiple/" title="Multiple" class="md-nav__link">
       Multiple
     </a>
   </li>
@@ -454,11 +377,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../bar/data_labels/" title="Data Labels" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Data Labels" class="md-nav__link md-nav__link--active">
       Data Labels
     </a>
+    
   </li>
 
         
@@ -484,58 +416,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-data" class="md-nav__link">
-    Overview of Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-first-attempt" class="md-nav__link">
-    Step 1: First Attempt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-axis-labels" class="md-nav__link">
-    Step 2: Axis Labels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-tick-values" class="md-nav__link">
-    Step 3: Tick Values
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-data-points" class="md-nav__link">
-    Step 4: Data Points
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-final-customize-the-points" class="md-nav__link">
-    Step Final: Customize the Points
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -550,124 +430,7 @@
                   
                 
                 
-                <h1 id="basic-line-chart">Basic Line Chart<a class="headerlink" href="#basic-line-chart" title="Permanent link">&para;</a></h1>
-<p>In this example, we are going to create a basic line chart to show the quarterly market share of Investors Exchange in U.S. equities market since it was launched in 2016. The final chart looks like below:</p>
-<p><span style="display:block;text-align:center">
-<img alt="Final Chart" src="../../assets/img/line.basic.step.final.png" />
-</span></p>
-<h2 id="overview-of-data">Overview of Data<a class="headerlink" href="#overview-of-data" title="Permanent link">&para;</a></h2>
-<p>The table <code>.line.iexMktShare</code> has the following schema:</p>
-<div class="highlight"><pre><span></span><code>c      | t f a
--------| -----
-quarter| s    
-mktshr | f
-</code></pre></div>
-
-<p>The first 3 rows from the table are as shown below.</p>
-<div class="highlight"><pre><span></span><code>quarter mktshr    
-------------------
-2016Q4  0.0174625 
-2017Q1  0.02009825
-2017Q2  0.02162242
-</code></pre></div>
-
-<h2 id="step-1-first-attempt">Step 1: First Attempt<a class="headerlink" href="#step-1-first-attempt" title="Permanent link">&para;</a></h2>
-<p>Let's get started with our first attempt to plot a line of market share against time using the default settings.</p>
-<pre><code class="q">// .line.basic.f01
-.qp.go[600;400;]
-  .qp.line[.line.iexMktShare;`quarter;`mktshr;::]
-</code></pre>
-
-<p>A basic line chart is created as below.</p>
-<p><span style="display:block;text-align:center">
-<img alt="Step 1" src="../../assets/img/line.basic.step.01.png" />
-</span></p>
-<p>There are a few places we can do better to improve this basic line chart:</p>
-<ul>
-<li>Update the <code>x</code> and <code>y</code> axis label to make them more readable</li>
-<li>Format the <em>y</em>-axis tick as percentage, <em>.i.e.</em> replacing <code>0.022</code> with <code>2.2%</code></li>
-<li>The <em>x</em>-axis tick values are too crowded</li>
-<li>Show the data points as a small empty circle</li>
-</ul>
-<p>Let's see how we can achieve the above improvements.</p>
-<h2 id="step-2-axis-labels">Step 2: Axis Labels<a class="headerlink" href="#step-2-axis-labels" title="Permanent link">&para;</a></h2>
-<p>By default, the column names are used as the axis labels. In this step, I will show how to customize the axis labels. We use <code>.qp.s.labels</code> to customize the appreance of labels.</p>
-<pre><code class="q">// .line.basic.f02
-.qp.go[600;400;]
-  .qp.line[.line.iexMktShare;`quarter;`mktshr;]
-    .qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-</code></pre>
-
-<p>By adding the last line in the above code snippet, the labels on both <em>x</em>-axis and <em>y</em>-axis look much nicer.</p>
-<p><span style="display:block;text-align:center">
-<img alt="Step 2" src="../../assets/img/line.basic.step.02.png" />
-</span></p>
-<h2 id="step-3-tick-values">Step 3: Tick Values<a class="headerlink" href="#step-3-tick-values" title="Permanent link">&para;</a></h2>
-<p>In this step, we make two changes:</p>
-<ul>
-<li>The tick values on the <em>y</em>-axis are rendered as percentage by adding a percent sign in string format</li>
-<li>Every other tick values are displayed on the <em>x</em>-axis to make it less crowded</li>
-</ul>
-<pre><code class="q">// .line.basic.f03
-xfmt:{n:`long$last string x;$[0=n mod 2;x;`]};
-yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
-
-.qp.go[600;400;]
-  .qp.line[.line.iexMktShare;`quarter;`mktshr;]
-     .qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-    ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
-    ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
-</code></pre>
-
-<p>The last two lines with <code>.qp.s.scale</code> customize the look of tick values on both <em>x</em>-axis and <em>y</em>-axis.</p>
-<p><span style="display:block;text-align:center">
-<img alt="Step 3" src="../../assets/img/line.basic.step.03.png" />
-</span></p>
-<h2 id="step-4-data-points">Step 4: Data Points<a class="headerlink" href="#step-4-data-points" title="Permanent link">&para;</a></h2>
-<p>The geometry settings allow us to show the data points and customize the color of the line and points.</p>
-<pre><code class="q">xfmt:{n:`long$last string x;$[0=n mod 2;x;`]};
-yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
-
-.qp.go[600;400;]
-  .qp.line[.line.iexMktShare;`quarter;`mktshr;]
-     .qp.s.geom[`fill`decorations!(`blue;1b)]
-    ,.qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-    ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
-    ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear]
-</code></pre>
-
-<p>The geometry setting <code>.qp.s.geom</code> above enables displaying the points and sets the color of the line and points to blue.</p>
-<p><span style="display:block;text-align:center">
-<img alt="Step 4" src="../../assets/img/line.basic.step.04.png" />
-</span></p>
-<h2 id="step-final-customize-the-points">Step Final: Customize the Points<a class="headerlink" href="#step-final-customize-the-points" title="Permanent link">&para;</a></h2>
-<p>To show points as empty circle, two changes are made:</p>
-<ul>
-<li>The fill color is white</li>
-<li>The outline color is red</li>
-</ul>
-<pre><code class="q">// .line.basic.ff
-xfmt:{n:`long$last string x;$[0=n mod 2;x;`]};
-yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
-
-.qp.go[600;400;]
-  .qp.title[&quot;IEX Market Share Since Its Inception&quot;]
-  .qp.stack (
-    .qp.line[.line.iexMktShare;`quarter;`mktshr;]
-       .qp.s.geom[`fill`decorations!(`blue;0b)]
-      ,.qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-      ,.qp.s.scale[`x;.gg.scale.format[xfmt;.gg.scale.categorical[]]]
-      ,.qp.s.scale[`y;.gg.scale.format[yfmt;] .gg.scale.linear];
-    .qp.point[t;`quarter;`mktshr;]
-       .qp.s.geom[`colour`fill`size`shape`strokewidth!(`red;`white;3;`circle;1)]
-      ,.qp.s.labels[`x`y!(`Quarter;`$&quot;Market Share (%)&quot;)]
-    )
-</code></pre>
-
-<p>Here is the final line chart with data points. A title is also added into the chart.</p>
-<p><span style="display:block;text-align:center">
-<img alt="Final Step" src="../../assets/img/line.basic.step.final.png" />
-</span></p>
+                <h1 id="bar-chart-with-data-labels">Bar Chart with Data Labels<a class="headerlink" href="#bar-chart-with-data-labels" title="Permanent link">&para;</a></h1>
                 
               
               
@@ -686,7 +449,7 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../multiple/" title="Multiple" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -695,25 +458,11 @@ yfmt:{`$string[0.1*floor 0.5+1000*x],&quot;%&quot;};
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Overview
+                Multiple
               </div>
             </div>
           </a>
         
-        
-          <a href="../smoothed/" title="Smoothed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Smoothed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
