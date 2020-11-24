@@ -1,0 +1,22 @@
+// @kind data
+//
+// @fileoverview This data table contains the volume profile for a stock. It 
+//  contains the volume percent for both open auction and close auction. The 
+//  time interval for the continuous is 30 minutes. It has the following 
+//  table schema:
+//
+//     c     | t f a
+//     ------| ----- 
+//     time  | u    
+//     volpct| f  
+//
+// A few notes about this data:
+//
+// - The value corresponding to ``09:29`` is for open auction and the value 
+//   for ``16:00`` is for close auction.
+// - The ``time`` column indicates the start time of 30-minute bars.
+//
+// @example Retrieve data
+// select from .bar.volumeProfile
+
+("UF";enlist csv) 0:read0 `:.bar/volumeProfile.csv

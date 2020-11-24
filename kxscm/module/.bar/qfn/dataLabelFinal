@@ -1,0 +1,29 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a bar chart with data labels.
+//
+// @example Create and render an bar chart specification:
+// .qp.go[600;400;] .bar.dataLabelFinal[]
+//
+// @returns {table} a GG specification
+
+{[]
+  labelFmt:{`$string[0.1*floor 0.5+1000*x],"%"};
+  t:update z:labelFmt each volpct from .bar.volumeProfile;
+  xfmt:{$[x=09:29;"Open";x=16:00;"Close";string x]};
+  yfmt:{`$string[floor 0.5+100*x],"%"};
+  
+  .qp.stack(
+    .qp.bar[t;`time;`volpct;]
+       .qp.s.geom[``fill`decorations!(::;`steelblue;0b)]
+      ,.qp.s.labels[`x`y!("";"Volume Profile (%)")]
+      ,.qp.s.scale[`x; .gg.scale.format[xfmt] .gg.scale.categorical[]]
+      ,.qp.s.scale[`y; .gg.scale.format[yfmt] .gg.scale.linear];
+ 
+    .qp.text[t;`time;`volpct;`z]
+       .qp.s.geom[``offsety`align`bold`size!(::;-10;`middle;1b;11)]
+      ,.qp.s.labels[`x`y!("";"Volume Profile (%)")]
+    )
+  }

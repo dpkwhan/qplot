@@ -28,7 +28,7 @@ google_analytics:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/dpkwhan/weeklyq
+      link: https://github.com/dpkwhan/qplot
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/zhaohuihan/
 

@@ -7,7 +7,7 @@
 // @example Create and render an bar chart specification:
 // .qp.go[600;400;] .bar.basic01[]
 //
-// @returns {table} a GG specification (for example, ``.qp.point[t; `x; `y; ::]``)
+// @returns {table} a GG specification
 
 {
   .qp.bar[.bar.mktShare20201117;`exchange;`mktShare;::]

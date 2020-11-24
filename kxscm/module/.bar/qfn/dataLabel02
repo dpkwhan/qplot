@@ -1,0 +1,16 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Create a bar chart with data labels.
+//
+// @example Create and render an bar chart specification:
+// .qp.go[600;400;] .bar.dataLabel02[]
+//
+// @returns {table} a GG specification
+
+{[]
+  t:select from .bar.volumeProfile;
+  .qp.bar[t;`time;`volpct;]
+    .qp.s.labels[`x`y!("";"Volume Profile (%)")]
+  }
